@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp-postcss": "^6.4.0",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1",
+    "normalize.css": "^6.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
