@@ -1,0 +1,10 @@
+.portfolio {
+	postion: absolute;
+	height: 900px;
+}
+
+.portfolio--card {
+width:280px;
+height: 360px;
+background: white;
+}
