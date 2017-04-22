@@ -1,5 +1,7 @@
 .card {
 	position: relative;
+	display: inline-block;
+	margin-top: 20px;
 	z-index: 2;
 	color: #333333;
 	text-align: center;
