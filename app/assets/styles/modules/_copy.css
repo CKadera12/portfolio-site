@@ -1,6 +1,15 @@
 .copy {
-font-size: 15px;
+margin: 0;
+font-size: 14px;
 font-family: Open Sans;
-line-height: 1.8;
-padding-bottom: 24px;
-}
+line-height: 1.8; 
+color: $darkGrey;
+
+	&--bold {
+		font-weight: 600;
+	}
+	
+	@mixin atSmall {
+	font-size: 16px;	
+	}
+} 

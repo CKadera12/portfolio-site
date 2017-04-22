@@ -2,48 +2,51 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio Website</title>
+ <meta name="keywords" content="Wyoming illustration, Wyoming design, coding, UFC art, UFC illustration, UFC design, ">
+  <meta name="description" content="Clint likes to illustrate, design, and code. He was born in the frozen tundra of Wyoming.">
 <!--google fonts-->
-<link href=
-"https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans:400,600" rel="stylesheet">
-
-<!--material design api-->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans:400,600" rel="stylesheet">
 
 <!--normalize.css style sheet-->
-<link rel="stylesheet" type="text/css" href="../app/temp/styles/styles.css">
+<link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
+
 </head>
 
 <body>
 <!--hero section-->
-<div class="hero">
-	<img class="hero__image" src="assets/images/header__wyoming.jpg">
-<div class="hero__text-content">
-	<h1 class="hero__title">Hi, I'm Clint <span>:)</span></h1>
-	<p class="copy">
-    I'm a designer, illustrator, and coder from <b>Wyoming.</b><br>
-    If you're hiring full-time, I'd love to be considered!
-    </p>
-    <a class=
-    "hero__button" 
-    target="blank" href="https://www.clintkadera.com/">Résumé
-    </a>
-    </div>
+<section class="hero">
+	<picture>
+    <source srcset="assets/images/header__wyoming.jpg" media="(min-width: 531px)">
+    <img src="assets/images/header__wyoming--small.png" alt="Wyoming illustration">
+    </picture>
+<div class="hero__text-content wrapper">
+    <header>
+        <h1 class="hero__title">Hi, I'm Clint <span>:)</span></h1>
+    </header>
+        <p class="copy">
+        I'm a designer, illustrator, and coder from <b>Wyoming.</b>
+        If you're hiring full-time, I'd love to be considered!
+        </p>
+        <a class= "button" 
+        target="blank" href="https://www.clintkadera.com/">Résumé
+        </a>
 </div>
+</section>
 
 <!--portfolio section-->
-<div class="portfolio">
+<section class="portfolio">
 <h2 class="section-title">Portfolio</h2>
 <div class="card">
-<h3 class="card__title">FedWatch</h3>
+<h3 class="copy copy--bold">FedWatch</h3>
 <p class="copy">Social media campaign design</p>
 </div>
 </div>
+</section>
 
 <!--contact section-->
-<div class="contact">
+<section class="contact">
 <h2 class="section-title">Contact</h2>
 <p class="copy">My email is <b>contact@clintkadera.com</b>, or message me at below!</p>
 <form action="where sending the info" method="POST">
@@ -52,6 +55,7 @@
 <input type="textarea" placeholder="Message" name="message">
 <input type="submit" value="Sumbmit">
 </form>
+</section>
 
 </body>
 </html> 
