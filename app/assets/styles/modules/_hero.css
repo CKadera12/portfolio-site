@@ -1,45 +1,71 @@
 .hero {
+	width: 100vw;
 	position: relative;
-	
-	&__image {
-		display: block;
-		height: 680px;
-		/*width: 100vw; */
-		z-index: 1; 
-		position: absolute;
-		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
+	background: white;
+	height: 680px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
+	/* hero images*/
+	
+	&__cloud {
+	}
+	
+	&__image-content--right {
+	overflow: hidden;
+	position: absolute;
+	text-align: center;	
+	left: 45vw;
+	display: none; 
+	z-index: 1;
+	
+	@mixin atSmall {
+		display: block;
+	} 
+	}
+	
+	&__image--right {
+		height: 680px;
+	}
+	
+	&__image-content--left {
+	overflow: hidden;
+	position: absolute;
+	text-align: center;	
+	left: -30vw;
+	display: none;
+	z-index: 1;
+	
+	@mixin atSmall{
+		display: block;
+	}
+	}
+	
+	&__image--left {
+		height: 680px;
+	}
 
 	&__text-content {
-		width: 352px;
 		z-index: 2;
 		position: absolute;
 		top: 160px;
 		text-align: center;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
 		
-		@mixin atLarge {
+		@mixin atSmall {
 		text-align: left;
-		width: 400px;
 		}
 		
 		@mixin atMedium {
-		
 		}
 }
 
 	&__title {
-		margin: 0;
 		font-size: 32px;
 		font-family: Merriweather;
 		letter-spacing: .3px;
 		line-height: 68px;
 		color: $darkGrey;
 		
-		@mixin atLarge {
+		@mixin atSmall {
 		font-size: 34px;
 	}
 	}
