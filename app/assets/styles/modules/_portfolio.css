@@ -1,0 +1,14 @@
+.portfolio {
+
+@mixin atSmall {
+	width: 100%;
+	display: flex;
+justify-content: space-between;	
+flex-flow: wrap;
+max-width: 1400px;
+}
+
+@mixin atMedium {
+display: inline-block;	
+}
+}

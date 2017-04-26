@@ -422,11 +422,21 @@ textarea {
 }
 
 body {
-	min-width: 303px;
+	min-width: 350px;
 	background: #eaeaea;
 	margin: 0, 0; 
 	padding: none;
 	position: absolute;
+}
+
+.max-min {
+max-width: 1400px;	
+min-width: 350px;
+}
+
+a {
+color: inherit;
+text-decoration: inherit;
 }
 
 /*default is someone trying to squish it*/
@@ -444,21 +454,16 @@ body {
 	position: relative;
 	background: white;
 	height: 680px;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-	
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);	
 }
 
 /* hero images*/
-
-.hero__cloud {
-	
-}
 
 .hero__image-content--right {
   overflow: hidden;
   position: absolute;
   text-align: center;
-  left: 45vw;
+  left: 50vw;
   display: none;
   z-index: 1;
 }
@@ -478,7 +483,7 @@ body {
   overflow: hidden;
   position: absolute;
   text-align: center;
-  left: -30vw;
+  right: 70vw;
   display: none;
   z-index: 1;
 }
@@ -497,71 +502,70 @@ body {
 .hero__text-content {
   z-index: 2;
   position: absolute;
-  top: 160px;
-  text-align: center;
+  width: 100vw;
+  top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 440px) {
 
   .hero__text-content {
-    text-align: left;
+    display: block;
   }
 }
 
-@media  (min-width: 768px) {
-	
-}
-
-.hero__title {
-  font-size: 32px;
-  font-family: Merriweather;
-  letter-spacing: .3px;
-  line-height: 68px;
+.hero__text {
+  margin: 0;
+  font-family: Open Sans, Helvetica, sans serif;
+  font-size: 18px;
+  line-height: 1.8;
   color: rgb(50, 50, 50);
+  text-align: center;
+  max-width: 340px;
 }
 
 @media (min-width: 440px) {
 
-  .hero__title {
-    font-size: 34px;
+  .hero__text {
+    text-align: left;
+    max-width: 440px;
   }
 }
 
-.portfolio {
-	postion: absolute;
-	height: 900px;
-	width: 70vw;
-}
+@media  (min-width: 768px) {}
 
-.copy {
-font-size: 14px;
-font-family: Open Sans;
-line-height: 1.8; 
-color: rgb(50, 50, 50);
-}
-
-.copy--bold {
-  font-weight: 600;
+.hero__text--title {
+  font-size: 36px;
+  font-family: Merriweather, serif;
+  letter-spacing: .3px;
+  color: rgb(50, 50, 50);
+  text-align: center;
 }
 
 @media (min-width: 440px) {
 
-  .copy {
-    font-size: 16px;
+  .hero__text--title {
+    text-align: left;
+    font-size: 44px;
   }
 }
+
+@media  (min-width: 768px) {}
 
 .button {
 		display: inline-block;
+		
 		text-decoration: none;
+		border: none;
 		font-family: Open Sans, san serif;
-		font-size: 16px; 
+		font-size: 18px; 
 		font-weight: 600;
 		border-radius: 8px;
-		padding: 8px 30px;
+		padding: 10px 32px;
 		background-color: rgb(50, 50, 50);
 		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 	0.12);
-		text-align: center;
 		color: white;
 		letter-spacing: .8px;
 		 -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 					1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -569,7 +573,7 @@ color: rgb(50, 50, 50);
 	}
 
 .button--margin-top {
-  margin-top: 20px;
+  margin-top: 34px;
 }
 
 &:active {
@@ -590,49 +594,185 @@ color: rgb(50, 50, 50);
 	}
 
 .card {
-	position: relative;
+
+	width: 100%;
 	display: inline-block;
 	margin-top: 20px;
 	z-index: 2;
 	color: #333333;
 	text-align: center;
-	width:320px;
-	height: 360px;
 	background: white;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); 
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: cover;
+	}
+
+@media (min-width: 440px) {
+
+  .card {
+    width: 48%;
+  }
+}
+
+@media  (min-width: 768px) {
+
+  .card {
+    width: 400px;
+  }
+}
+
+/* image url on site host 
+	
+	&--FedWatch {
+	background-image: ../../images/plainsmen-logo.jpg;
+	} */
+
+.card__text {
+  margin: 0;
+  font-family: Open Sans;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgb(50, 50, 50);
+}
+
+@media (min-width: 440px) {}
+
+.card__text--title {
+  font-weight: 600;
 }
 
 .wrapper {
-	
+
 	padding-left: 20px;
 	padding-right: 20px;
-	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-}
+	text-align: center;
+	
+	
+	
+/*	&--hero {
+		/* using a max-width to control hero paragraph line breaks*/
+	/*	@mixin atMedium {
+		max-width: 400px;
+	} */
+	}
 
-@media  (min-width: 768px) {
+@media (min-width: 440px) {
 
   .wrapper {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    text-align: left;
+    padding-left: 12vw;
+    padding-right: 12vw;
   }
 }
 
-/* using a max-width to control hero paragraph line breaks*/
+@media  (min-width: 768px) {}
+
+@media (min-width: 440px) {
+
+  .portfolio {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    max-width: 1400px;
+  }
+}
 
 @media  (min-width: 768px) {
 
-  .wrapper--hero {
-    max-width: 400px;
+  .portfolio {
+    display: inline-block;
   }
 }
 
-.page-section {
-width: 100vw;
-text-align: center;	
+.contact {
+	width: 100vw;
+	position: relative;
+	background: white;
+	height: 500px;
+	}
+
+.contact__text {
+  margin: 0;
+  font-family: Open Sans;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgb(50, 50, 50);
 }
 
-.row {
-	
+@media (min-width: 440px) {
+
+  .contact__text {
+    font-size: 16px;
+  }
+}
+
+.contact__text--title {
+  font-size: 32px;
+  font-family: Merriweather;
+  letter-spacing: .3px;
+  color: rgb(50, 50, 50);
+}
+
+@media (min-width: 440px) {
+
+  .contact__text--title {
+    font-size: 34px;
+  }
+}
+
+.contact__form {
+  width: 500px;
+}
+
+.contact__name {
+  border: none;
+}
+
+.contact__name:focus {
+  outline: none;
+}
+
+.contact__email {
+  border: none;
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+}
+
+.contact__email:focus {
+  outline: none;
+}
+
+.contact__message {
+  border: none;
+}
+
+.contact__message:focus {
+  outline: none;
+}
+
+.section-title{
+	margin-top: 60px;
+		font-family: Open Sans, Helvetica, sans serif;
+		font-size: 27px;
+		line-height: 1.8;
+		color: rgb(50, 50, 50);
+		text-align: center;
+}
+
+@media (min-width: 440px) {
+
+  .section-title {
+    text-align: left;
+    max-width: 500px;
+  }
 }

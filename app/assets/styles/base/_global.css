@@ -1,7 +1,17 @@
 body {
-	min-width: 303px;
+	min-width: 350px;
 	background: #eaeaea;
 	margin: 0, 0; 
 	padding: none;
 	position: absolute;
+}
+
+.max-min {
+max-width: 1400px;	
+min-width: 350px;
+}
+
+a {
+color: inherit;
+text-decoration: inherit;
 }

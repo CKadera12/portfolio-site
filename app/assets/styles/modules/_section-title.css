@@ -1,0 +1,13 @@
+.section-title{
+	margin-top: 60px;
+		font-family: Open Sans, Helvetica, sans serif;
+		font-size: 27px;
+		line-height: 1.8;
+		color: $darkGrey;
+		text-align: center;
+		
+		@mixin atSmall {
+		text-align: left;
+		max-width: 500px;
+		}
+}

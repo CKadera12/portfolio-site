@@ -22,4 +22,10 @@
 @media (min-width: 1024px){
 @mixin-content;	
 }
+
+@define-mixin atMax {
+@media (min-width: 1400px){
+@mixin-content;	
+}
+}
 }

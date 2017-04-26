@@ -1,0 +1,60 @@
+.contact {
+	width: 100vw;
+	position: relative;
+	background: white;
+	height: 500px;
+	
+	&__text {
+		margin: 0;
+		font-family: Open Sans;
+		font-size: 14px;
+		line-height: 1.8;
+		color: $darkGrey;
+	
+		@mixin atSmall {
+			font-size: 16px;	
+		}
+			
+			&--title {
+		font-size: 32px;
+		font-family: Merriweather;
+		letter-spacing: .3px;
+		color: $darkGrey;
+		
+		@mixin atSmall {
+		font-size: 34px;
+	}
+			}
+		}
+		
+	&__form {
+	width: 500px;
+		
+	}
+		
+	&__name {
+		border: none;
+	
+		&:focus {
+			outline: none;
+	}
+	}
+	
+	&__email {
+		border: none;
+		writing-mode: horizontal-tb;
+		
+		&:focus {
+			outline: none;	
+	}
+	}
+		
+	&__message {
+		border: none;
+
+		
+		&:focus {
+			outline: none;
+	}
+	}
+	} 

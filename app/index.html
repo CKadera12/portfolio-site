@@ -15,22 +15,23 @@
 </head>
 
 <body>
+<div class="max-min">
 <!--hero section-->
 <section class="hero">
-<img class="hero__cloud" src="assets/images/header/cloud-1.png">
 <div class="hero__image-content--right">
     <img class ="hero__image--right" src="assets/images/header/hero__right.png" alt="Wyoming illustration">
 </div>
+
 <div class="hero__image-content--left">
 <img class ="hero__image--left" src="assets/images/header/hero__left.png" alt="Wyoming illustration">
 </div>
    
-    <div class="page-section hero__text-content">
+    <div class="hero__text-content">
     <div class="wrapper wrapper--hero">
     <header>
-        <h1 class="hero__title">Hi, I'm Clint <span>:)</span></h1>
+        <h1 class="hero__text--title">Hi, I'm Clint <span>:)</span></h1>
     </header>
-        <p class="copy">
+        <p class="hero__text">
         I'm a designer, illustrator, and coder from <b>Wyoming.</b>
         If you're hiring full-time, I'd love to be considered!
         </p>
@@ -42,27 +43,49 @@
 </section>
 
 <!--portfolio section-->
-<section class="page-section">
 <div class="wrapper">
+
+
     <h2 class="section-title">Portfolio</h2>
-    <div class="card">
-    <h3 class="copy copy--bold">FedWatch</h3>
-    <p class="copy">Social media campaign design</p>
-    </div>
     
-    <div class="card">
-    <h3 class="copy copy--bold">FedWatch</h3>
-    <p class="copy">Social media campaign design</p>
-    </div>
+    <!--_portfolio.css is parent that allows "card" to use flexblock-->
+    <div class="portfolio">
     
-    <div class="card">
-    <h3 class="copy copy--bold">FedWatch</h3>
-    <p class="copy">Social media campaign design</p>
-    </div>
+    <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">Fighters</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
+   
+    <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">FedWatch</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
+     
+     <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">Pyscho</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
     
-    <div class="card">
-    <h3 class="copy copy--bold">FedWatch</h3>
-    <p class="copy">Social media campaign design</p>
+     <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">Laramie Wrestling</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
+    
+     <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">Twilight Zone Icons</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
+    
+     <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">Brandon Ingram</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
+    
+     <a class="card" href="https://clintkadera.com">
+    <h3 class="card__text card__text--title">Horror Authors</h3>
+    <p class="card__text">Social media campaign design</p>
+    </a>
+    
 </div>
 </div>
 
@@ -70,16 +93,19 @@
 
 <!--contact section-->
 <section class="contact">
+<div class="wrapper">
 <h2 class="section-title">Contact</h2>
-<p class="copy">My email is <b>contact@clintkadera.com</b>, or message me at below!</p>
-<form action="where sending the info" method="POST">
-<input type="text" placeholder="Name" name="name">
-<input type="email" placeholder="Email" name="email">
-<input type="textarea" placeholder="Message" name="message">
-<input type="submit" value="Sumbmit">
+<p class="contact__text">My email is <a href="mailto:contact@clintkadera.com"> <b>contact@clintkadera.com</b></a>, or you can message me below!</p> 
+<form class="contact__form" action="where sending the info" method="POST">
+<input class="contact__text contact__name" type="text" placeholder="Name" name="name">
+<input class="contact__text contact__email" type="email" placeholder="Email" name="email">
+<textarea class="contact__text contact__message" rows="5" cols="50" placeholder="Message" name="message"></textarea>
+<input class="button button--margin-top" type="submit" value="Sumbmit">
 </form>
+</div>
 </section>
 
+</div>
 </body>
 </html> 
   

@@ -3,10 +3,9 @@
 @import "base/_variables.css";
 @import "base/_mixins.css";
 @import "modules/_hero";
-@import "modules/_portfolio";
-@import "modules/_copy";
 @import "modules/_button";
 @import "modules/_card"; 
 @import "modules/_wrapper";
-@import "modules/_page-section";
-@import "modules/_row";
+@import "modules/_portfolio";
+@import "modules/_contact"; 
+@import "modules/_section-title";
