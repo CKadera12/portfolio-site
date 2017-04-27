@@ -8,7 +8,14 @@ flex-flow: wrap;
 max-width: 1400px;
 }
 
-@mixin atMedium {
-display: inline-block;	
+&__text-content {
+	z-index: 2;
+		width: 100vw;
+		top: 140px;
+		display: flex;
+		
+		@mixin atSmall {
+		display: block;	
+		}
 }
 }

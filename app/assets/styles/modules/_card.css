@@ -1,8 +1,8 @@
 .card {
-
+	box-sizing: border-box;
 	width: 100%;
 	display: inline-block;
-	margin-top: 20px;
+	margin-top: 10px;
 	z-index: 2;
 	color: #333333;
 	text-align: center;
@@ -12,12 +12,12 @@
 	background-position-y: 50%;
 	background-size: cover;
 	
-	@mixin atSmall {
-	width: 48%;
+	@mixin atMedium {
+	
 	}
 	
-	@mixin atMedium {
-	width: 400px;	
+	@mixin atLarge {
+	width: 32%;	
 	}
 	
 	/* image url on site host 
@@ -41,3 +41,10 @@
 		}
 	}
 	}
+	
+	/*using nth child so cards have more leading between them –> as opposed to cards and header "portfolio".
+	sloppy, should figure out a better solution*/
+	
+.card:nth-child(1n+4) {
+	margin-top: 50px;	
+}
