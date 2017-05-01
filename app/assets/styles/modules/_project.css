@@ -1,0 +1,37 @@
+.project {
+	margin-top: 0;
+	height: 400px;
+	width: 100%;
+	z-index: 50;
+background-color: red;
+display: block;
+
+
+&__task {
+flex: 1;
+}
+
+&__solution {
+flex: 1;
+}
+
+&__text{
+		color: $darkGrey;
+		z-index: 3;
+		padding: 0px 20px;
+		
+		line-height: 1.8;
+		
+		&--title {
+			font-weight: 600;
+			padding: 0px 20px;
+			color: $darkGrey;
+}
+}
+
+&--is-visible{
+display: block;
+}
+
+
+}

@@ -2,10 +2,13 @@
 @import "base/_global.css";
 @import "base/_variables.css";
 @import "base/_mixins.css";
+@import "modules/_type";
 @import "modules/_hero";
 @import "modules/_button";
 @import "modules/_card"; 
 @import "modules/_wrapper";
 @import "modules/_portfolio";
 @import "modules/_contact"; 
-@import "modules/_section-title";
+@import "modules/_section-title"; 
+@import "modules/_project";
+@import "modules/_gallery";

@@ -6,9 +6,12 @@ body {
 	position: absolute;
 }
 
+
 .max-min {
-max-width: 1400px;	
+max-width: 1600px;	
 min-width: 350px;
+overflow-x: hidden;
+overflow-y: hidden;
 }
 
 a {

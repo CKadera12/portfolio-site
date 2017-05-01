@@ -1,3 +1,32 @@
+.gallery {
+
+@mixin atSmall {
+	width: 100%;
+	display: flex;
+justify-content: space-between;	
+flex-flow: wrap;
+
+&--is-visible{
+display: none;	
+}
+}
+
+@mixin atMedium {
+	max-width: 1400px;
+}
+
+&__text-content {
+	z-index: 2;
+		width: 100vw;
+		top: 140px;
+		display: flex;
+		
+		@mixin atSmall {
+		display: block;	
+		}
+}	
+}
+
 .card {
 	box-sizing: border-box;
 	width: 100%;
@@ -13,11 +42,12 @@
 	background-size: cover;
 	
 	@mixin atMedium {
-	
+	width: 48%;
 	}
 	
 	@mixin atLarge {
-	width: 32%;	
+	width: 30%;	
+	height: 500px;
 	}
 	
 	/* image url on site host 
@@ -37,6 +67,7 @@
 		}
 		
 		&--title {
+			margin-top: 15vpx;
 			font-weight: 600;
 		}
 	}

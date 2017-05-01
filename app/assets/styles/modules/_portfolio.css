@@ -5,8 +5,12 @@
 	display: flex;
 justify-content: space-between;	
 flex-flow: wrap;
-max-width: 1400px;
+
+&--is-visible{
+display: none;	
 }
+}
+
 
 &__text-content {
 	z-index: 2;

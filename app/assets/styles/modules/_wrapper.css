@@ -9,21 +9,16 @@
 	
 	@mixin atSmall {
 		text-align: left;
-		padding-left: 12vw;
-	padding-right: 12vw;
-	
+	padding-left: 10vw;
+	padding-right: 10vw;	
 	}
 	
 	@mixin atMedium {
-	
+
 	}
 	
+	@mixing atLarge {
 	
-	
-/*	&--hero {
-		/* using a max-width to control hero paragraph line breaks*/
-	/*	@mixin atMedium {
-		max-width: 400px;
-	} */
+	}
 	}
 

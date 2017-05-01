@@ -1,8 +1,21 @@
 .contact {
+	margin-top: 150px;
+	padding-top: 30px;
 	width: 100vw;
 	position: relative;
 	background: white;
 	height: 500px;
+	
+	&__text-content {
+		margin-top: 80px;
+		width: 100vw;
+		top: 140px;
+		display: flex;
+		
+		@mixin atSmall {
+		display: block;	
+		}
+	}
 	
 	&__text {
 		margin: 0;
