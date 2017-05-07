@@ -1,37 +1,54 @@
 .project {
-	margin-top: 0;
-	height: 400px;
-	width: 100%;
-	z-index: 50;
-background-color: red;
-display: block;
+	display: none;
+/*transition: opacity 2s linear; */
 
-
-&__task {
-flex: 1;
-}
-
-&__solution {
-flex: 1;
-}
-
-&__text{
-		color: $darkGrey;
-		z-index: 3;
-		padding: 0px 20px;
-		
-		line-height: 1.8;
-		
-		&--title {
-			font-weight: 600;
-			padding: 0px 20px;
-			color: $darkGrey;
-}
-}
 
 &--is-visible{
+animation: fade 1s ease-out;
 display: block;
+z-index: 3; 
 }
 
+&__image {
+margin: 5px 0;
 
+&--small {
+flex-basis: 20%;	
+}
+
+&--large {
+flex-basis: 48%;
+}
+}
+
+&__context {
+@mixin atMedium {
+flex-basis: 48%;	
+}
+}
+
+&__header {
+flex: 1;
+}
+
+&__description {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0px;
+	align-items: center;
+}
+
+&__close {
+font-size: 20px;	
+}
+}
+
+@keyframes fade {
+0% {
+opacity: 0;	
+}
+100% {
+opacity: 1;	
+}
 }

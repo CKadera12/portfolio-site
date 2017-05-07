@@ -9898,39 +9898,6 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var WorkLoad = function WorkLoad() {
-	_classCallCheck(this, WorkLoad);
-
-	_jquery2.default.ajaxSetup({ cache: true });
-	(0, _jquery2.default)(".card").click(function () {
-
-		var newHTML = "/assets/styles/work/work1.html";
-
-		(0, _jquery2.default)(".project").load(newHTML);
-	});
-};
-
-exports.default = WorkLoad;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _jquery = __webpack_require__(0);
@@ -9946,7 +9913,7 @@ var Project = function () {
 		_classCallCheck(this, Project);
 
 		this.card = (0, _jquery2.default)(".card");
-		this.portfolio = (0, _jquery2.default)(".portfolio");
+		this.portfolio = (0, _jquery2.default)(".gallery");
 		this.project = (0, _jquery2.default)(".project");
 
 		this.events();
@@ -9960,8 +9927,9 @@ var Project = function () {
 	}, {
 		key: "toggleTheMenu",
 		value: function toggleTheMenu() {
-			this.portfolio.toggleClass("portfolio--is-visible");
+
 			this.project.toggleClass("project--is-visible");
+			this.portfolio.toggleClass("gallery--is-visible");
 		}
 	}]);
 
@@ -9971,23 +9939,56 @@ var Project = function () {
 exports.default = Project;
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var WorkLoad = function WorkLoad() {
+	_classCallCheck(this, WorkLoad);
+
+	_jquery2.default.ajaxSetup({ cache: true });
+	(0, _jquery2.default)(".card").click(function () {
+
+		var newHTML = "/assets/styles/work/fedwatch.html";
+
+		(0, _jquery2.default)(".project").load(newHTML);
+	});
+};
+
+exports.default = WorkLoad;
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _Project = __webpack_require__(2);
+var _Project = __webpack_require__(1);
 
 var _Project2 = _interopRequireDefault(_Project);
 
-var _Portfolio = __webpack_require__(1);
+var _WorkLoad = __webpack_require__(2);
 
-var _Portfolio2 = _interopRequireDefault(_Portfolio);
+var _WorkLoad2 = _interopRequireDefault(_WorkLoad);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var workLoad = new _Portfolio2.default();
+var workLoad = new _WorkLoad2.default();
 var project = new _Project2.default();
 
 /***/ })

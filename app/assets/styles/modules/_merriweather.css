@@ -1,0 +1,15 @@
+.merriweather {
+	margin: 0;
+	line-height: 2.2;
+		font-size: 36px;
+		font-family: Merriweather, serif;
+		letter-spacing: .3px;
+		color: $darkGrey;
+		text-align: center;
+		
+		@mixin atSmall {
+	text-align: left;	
+	font-size: 44px;
+	}
+}
+

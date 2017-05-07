@@ -29,13 +29,13 @@
     <div class="hero__text-content">
     <div class="wrapper wrapper--hero">
     <header>
-        <h1 class="hero__text--title">Hi, I'm Clint <span>:)</span></h1>
+        <h1 class="merriweather">Hi, I'm Clint <span>:)</span></h1>
     </header>
-        <p class="hero__text">
-        I'm a designer, illustrator, and coder from <b>Wyoming.</b>
+        <p class="hero__text open-sans open-sans--18">
+        I'm an illustrator, designer, and coder from <b>Wyoming.</b>
         If you're hiring full-time, I'd love to be considered!
         </p>
-        <a class= "button button--margin-top mdl-ripple" 
+        <a class= "button margin--top--35 mdl-ripple" 
         target="blank" href="https://www.clintkadera.com/">Résumé
         </a>
         </div>
@@ -49,49 +49,45 @@
 <div class="wrapper">
 
     <h2 class="section-title">Portfolio</h2>
-    
-    <div class="project">
-<div class="project-load"></div>
-
-</div>
+    <div class="project"></div>
 
     
     <!--_portfolio.css is parent that allows "card" to use flexblock-->
-    <div class="portfolio">
+    <div class="gallery gallery--is-visible">
     
-    <div class="card">
-    <h3 class="card__text card__text--title">Fighters</h3>
-    <p class="card__text">Fullstack app development</p>
+    <div class="card" data-folder="{{project.folder}}">
+    <h3 class="open-sans open-sans--18 open-sans--bold">Fighters</h3>
+    <p class="open-sans open-sans--18">Fullstack app development</p>
     </div>
    
-    <a class="card" href="https://clintkadera.com">
-    <h3 class="card__text card__text--title">FedWatch</h3>
-    <p class="card__text">Social media campaign design</p>
-    </a>
+    <div class="card" data-folder="{{project.folder}}">
+    <h3 class="open-sans open-sans--18 open-sans--bold">FedWatch</h3>
+    <p class="open-sans open-sans--18">Social media campaign design</p>
+    </div>
      
      <a class="card" href="https://clintkadera.com">
     <h3 class="card__text card__text--title">Pyscho</h3>
-    <p class="card__text">Graphite illustration</p>
+    <p class="open-sans open-sans--18">Graphite illustration</p>
     </a>
     
      <a class="card" href="https://clintkadera.com">
     <h3 class="card__text card__text--title">Laramie Wrestling</h3>
-    <p class="card__text">Sports logo / wordmark design</p>
+    <p class="open-sans open-sans--18">Sports logo / wordmark design</p>
     </a>
     
      <a class="card" href="https://clintkadera.com">
     <h3 class="card__text card__text--title">Twilight Zone Icons</h3>
-    <p class="card__text">Icon design</p>
+    <p class="open-sans open-sans--18">Icon design</p>
     </a>
     
      <a class="card" href="https://clintkadera.com">
     <h3 class="card__text card__text--title">Brandon Ingram</h3>
-    <p class="card__text">Graphite illustration</p>
+    <p class="open-sans open-sans--18">Graphite illustration</p>
     </a>
     
      <a class="card" href="https://clintkadera.com">
     <h3 class="card__text card__text--title">Horror Authors</h3>
-    <p class="card__text">Ink illustration</p>
+    <p class="open-sans open-sans--18">Ink illustration</p>
     </a>
     </div>
 </div>
@@ -105,12 +101,12 @@
 <div class="contact__text-content">
 <div class="wrapper">
 <h2 class="section-title">Contact</h2>
-<p class="contact__text">My email is <a href="mailto:contact@clintkadera.com"> <b>contact@clintkadera.com</b></a>, or you can message me below!</p> 
-<form class="contact__form" action="where sending the info" method="POST">
-<input class="contact__text contact__name" type="text" placeholder="Name" name="name">
-<input class="contact__text contact__email" type="email" placeholder="Email" name="email">
-<textarea class="contact__text contact__message" rows="5" cols="50" placeholder="Message" name="message"></textarea>
-<input class="button button--margin-top" type="submit" value="Sumbmit">
+<p class="open-sans open-sans--18">My email is <a href="mailto:contact@clintkadera.com"> contact@clintkadera.com</a>, or you can message me below!</p>
+<form class="open-sans open-sans--18 contact__form" action="where sending the info" method="POST">
+<input class="contact__name" type="text" placeholder="Name" name="name">
+<input class="contact__email" type="email" placeholder="Email" name="email">
+<textarea class="contact__message" rows="5" cols="50" placeholder="Message" name="message"></textarea>
+<input class="button button--margin-top button--margin-bottom" type="submit" value="Sumbmit">
 </form>
 </div>
 </div>

@@ -1,10 +1,10 @@
 import $ from "jquery";
 
 class Project {
-constructor() {
+constructor() { 
 	this.card = $(".card");
-	this.portfolio = $(".portfolio");
-	this.project = $(".project");
+	this.portfolio = $(".gallery");
+	this.project = $(".project"); 
 	
 	this.events();
 }
@@ -14,8 +14,9 @@ this.card.click(this.toggleTheMenu.bind(this));
 }
 
 toggleTheMenu() {
-	this.portfolio.toggleClass("portfolio--is-visible");
+	
 	this.project.toggleClass("project--is-visible");
+	this.portfolio.toggleClass("gallery--is-visible");
 }
 } 
 

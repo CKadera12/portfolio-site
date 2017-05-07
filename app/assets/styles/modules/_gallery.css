@@ -1,6 +1,25 @@
-.gallery { 
-width: 100%;
-	display: flex;
+.gallery {
+
+@mixin atSmall {
+	width: 100%;
+	display: none;
 justify-content: space-between;	
 flex-flow: wrap;
+
+&--is-visible{
+display: flex;	
+}
+}
+
+
+&__text-content {
+	z-index: 2;
+		width: 100vw;
+		top: 140px;
+		display: flex;
+		
+		@mixin atSmall {
+		display: block;	
+		}
+}
 }

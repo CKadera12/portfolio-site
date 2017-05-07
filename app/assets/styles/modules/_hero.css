@@ -54,39 +54,11 @@
 }
 
 &__text {
-		margin: 0;
-		font-family: Open Sans, Helvetica, sans serif;
-		font-size: 18px;
-		line-height: 1.8;
-		color: $darkGrey;
-		text-align: center;
 		max-width: 340px;
 		
 		@mixin atSmall {
 		text-align: left;
-		max-width: 440px;
-		}
-		
-		@mixin atMedium {
-		
-		
-		}
-			
-			&--title {
-		font-size: 36px;
-		font-family: Merriweather, serif;
-		letter-spacing: .3px;
-		color: $darkGrey;
-		text-align: center;
-		
-		@mixin atSmall {
-	text-align: left;	
-	font-size: 44px;
-	}
-	
-	@mixin atMedium {
-
-	}
+		max-width: 460px;
 		}
 	}	
 }

@@ -56,21 +56,6 @@ display: none;
 	background-image: ../../images/plainsmen-logo.jpg;
 	} */
 
-	&__text {
-		margin: 0;
-		font-family: Open Sans;
-		font-size: 18px;
-		line-height: 1.8;
-		color: $darkGrey;
-	
-		@mixin atSmall {
-		}
-		
-		&--title {
-			margin-top: 15vpx;
-			font-weight: 600;
-		}
-	}
 	}
 	
 	/*using nth child so cards have more leading between them –> as opposed to cards and header "portfolio".

@@ -6,9 +6,9 @@
 		line-height: 1.8;
 		color: $darkGrey;
 		text-align: center;
+		width: 100%;
 		
 		@mixin atSmall {
 		text-align: left;
-		
 		}
 }
