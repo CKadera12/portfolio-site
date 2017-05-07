@@ -706,7 +706,7 @@ font-weight: 600;
 	width: 100vw;
 	position: relative;
 	background: white;
-	height: 500px;
+	height: 700px;
 	}
 
 .contact__text-content {
@@ -949,4 +949,14 @@ opacity: 1;
     text-align: left;
     font-size: 44px;
   }
+}
+
+.reveal-item {
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-out;
+	transition: opacity 1s ease-out;
+}
+
+.reveal-item--is-visible {
+  opacity: 1;
 }
