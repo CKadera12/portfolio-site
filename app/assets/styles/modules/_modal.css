@@ -1,0 +1,38 @@
+.modal {
+position: fixed;
+z-index: 10;
+background-color: rgba(255,255,255, 1);
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+opacity: 0;
+visibility: hidden;
+transform: scale(1.2);
+transition: all .4s ease-out;
+
+&--is-visible {
+font-size: 20px;
+font-weight: 600;
+opacity: 1;
+visibility: visible;
+transform: scale(1);
+text-align: left;
+
+}
+
+&__close {
+position: absolute;
+top: 45px;
+left: 45px;
+transform: scaleX(1.2);
+transform-origin: 100% 0;
+color: $grey;
+cursor: pointer;
+
+&:hover {
+	color: purple;
+}
+}
+}
+

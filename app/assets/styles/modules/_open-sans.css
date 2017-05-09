@@ -1,8 +1,10 @@
 .open-sans {
 	margin: 0;
 	font-family: Open Sans, Helvetica, sans serif;
-	color: $darkGrey;
+	color: $grey;
 	line-height: 2;
+	font-size: 14px; 
+	font-weight: 300;
 	
 	&--18 { 
 	font-size: 18px;	
@@ -11,9 +13,28 @@
 	&--20 {
 	font-size: 20px;	
 	}
+	&--27 {
+	font-size: 27px;
+	
+	@mixin atSmall {
+		text-align: left;
+		}
+	}
+	
+	&--padding-bottom{
+	padding-bottom: 15px;	
+	}
+	
+	&--regular {
+	font-weight: 400;	
+	}
+	
+	&--semi-bold {
+	font-weight: 600;	
+	}
 	
 	&--bold {
-	weight: 600;
+	font-weight: 700;
 	}
 	
 	&--16 {
@@ -22,5 +43,13 @@
 	&--grey {
 	color: $grey;	
 	}
-}
+	
+	&--grey2 {
+	color: $grey2;	
+	}
+	
+	&--darkgrey{
+	color: $darkGrey;	
+	}
+} 
 }

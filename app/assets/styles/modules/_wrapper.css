@@ -12,5 +12,11 @@
 	padding-left: 10vw;
 	padding-right: 10vw;	
 	}
+	
+	&--static {
+	@mixin atSmall {
+	width: 1200px;
+	}
+	}
 	}
 
