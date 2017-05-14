@@ -12,62 +12,32 @@ position: fixed;*/
 animation: fade 1s ease-out;
 display: block;
 align-items: center;
-z-index: 3;
+z-index: -1;
 /*background: white;*/
 }
 
-&__description {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-
-}
-
-&__image {
-margin: 15px 0;
-
-&--small {
-flex-basis: 30%;
-}
-
-&--large {
-
-}
-}
-
-&__container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-&__context {
-margin: 40px 0;
-@mixin atExtraLarge{
-flex-basis: 48%;
-}
+&__desktop-animation {
+background:url(/assets/images/fedwatch/fedwatch--social-media-screens.jpg);
+background-position: 1% 11%;
+background-size: auto 63%;
+background-repeat: no-repeat;
+animation: two-frames 5s steps(2) infinite;	
 }
 
 &__header {
 flex-basis: 100%;
 margin-top: 50px;
-margin-bottom: 100px;
+margin-bottom: 20px;
 }
 
 &__close {
-flex-basis: 100%;
+text-align: center;
+cursor: pointer;
+display: block;
 font-size: 20px;	
+padding-bottom: 20px;
 border-bottom: 1px solid rgb(180,180,180);
-padding-top: 50px;
-padding-bottom: 50px;
-}
-}
 
-@keyframes fade {
-0% {
-opacity: 0;	
-}
-100% {
-opacity: 1;	
+z-index: 20;
 }
 }

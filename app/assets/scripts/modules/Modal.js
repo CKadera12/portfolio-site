@@ -7,7 +7,8 @@ class Modal {
 	this.modal = $(".modal");
 	this.resumeContainer = $(".modal__resume");
 	this.closeModalButton = $(".modal__close");
-	this.resume = "/assets/styles/work/resume.html";
+	this.body = $("body");
+	this.resume = "/assets/ajax/resume.html";
 	this.events();
 	}
 	
@@ -26,17 +27,21 @@ class Modal {
 
   keyPressHandler(e) {
     if (e.keyCode == 27) {
+		console.log("esc pressed");
       this.closeModal();
     }
   }
 	
 	openModal() {
+		this.body.addClass("no-scrolling");
 		this.modal.addClass("modal--is-visible");
 		this.resumeContainer.load(this.resume);
 	}
 	
 	closeModal() {
 		this.modal.removeClass("modal--is-visible");
+		this.body.removeClass("no-scrolling");
+		
 	}
 }
 

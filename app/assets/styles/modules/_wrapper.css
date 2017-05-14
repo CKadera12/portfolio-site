@@ -1,22 +1,16 @@
 .wrapper {
-
+width: 100%;
+max-width: 1100px;
 	padding-left: 20px;
 	padding-right: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	
+	overflow: hidden;
 	
 	@mixin atSmall {
 		text-align: left;
 	padding-left: 10vw;
 	padding-right: 10vw;	
 	}
-	
-	&--static {
-	@mixin atSmall {
-	width: 1200px;
-	}
-	}
-	}
-
+}

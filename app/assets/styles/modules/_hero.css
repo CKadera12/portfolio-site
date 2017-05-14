@@ -1,4 +1,5 @@
 .hero {
+	z-index: 5;
 	width: 100vw;
 	position: relative;
 	background: white;
@@ -15,7 +16,7 @@
 	display: none; 
 	z-index: 1;
 	
-	@mixin atSmall {
+	@mixin atMedium {
 		display: block;
 	}
 	}
@@ -32,7 +33,7 @@
 	display: none;
 	z-index: 1;
 	
-	@mixin atSmall{
+	@mixin atMedium{
 		display: block;
 	}
 	}

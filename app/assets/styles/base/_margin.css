@@ -4,5 +4,16 @@
 	margin-top: 35px;
 	}
 	
+	&--top--70{
+	margin-top: 100px;	
+	}
+	&--bottom--35{
+	margin-bottom: 35px;	
+	}
+	
+	&--bottom--70{
+	margin-bottom: 100px;	
+	}
+	
 	
 }

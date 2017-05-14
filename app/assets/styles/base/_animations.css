@@ -1,0 +1,20 @@
+@keyframes fade {
+0% {
+opacity: 0;	
+}
+100% {
+opacity: 1;
+}
+}
+
+
+/*Bout thumbnail animation*/
+@keyframes play {
+		0% {background-position-x: .5%; }
+	100% { background-position-x: 100%;	}
+	}
+	
+@keyframes two-frames {
+0% {background-position-x: 0%; }
+100% { background-position-x: 200%;	}
+}

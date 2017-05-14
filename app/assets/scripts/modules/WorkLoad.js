@@ -1,15 +1,25 @@
 import $ from "jquery";
 
 class WorkLoad {
-constructor(){
+constructor(cardID, file){
 $.ajaxSetup ({cache: true});
-$(".card").click(function() {
-	
-	var newHTML = "/assets/styles/work/fedwatch.html";
-	
-	
-	$(".project").load(newHTML);
-})
+this.card = cardID;
+this.project = $(".project");
+this.newHTML = "/assets/ajax/" + file;
+
+this.events();
+}
+
+
+events(){
+	this.card.click(this.loadProject.bind(this));
+}
+
+
+
+loadProject() {
+console.log(this.card);
+this.project.load(this.newHTML);
 }
 }
 

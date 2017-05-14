@@ -1,10 +1,12 @@
- import $ from "jquery";
-import Project from "./modules/Project";  
+import $ from "jquery";
 import WorkLoad from "./modules/WorkLoad";
+import Project from "./modules/Project";  
 import RevealOnScroll from "./modules/RevealOnScroll"; 
-import Modal from "./modules/Modal";
+import Modal from "./modules/Modal";  
       
-var workLoad = new WorkLoad();
-var project = new Project();  
-new RevealOnScroll($(".card"), "90%");  
-var modal = new Modal();
+new WorkLoad($("#fedwatch"), "fedwatch.html");   
+new WorkLoad($("#bout"), "bout.html");
+new Project($(".card"));
+new Project($(".project__close"));
+//new RevealOnScroll($(".card"), "90%");  
+var modal = new Modal();   

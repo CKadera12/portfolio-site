@@ -1,10 +1,18 @@
+
 .open-sans {
-	margin: 0;
 	font-family: Open Sans, Helvetica, sans serif;
 	color: $grey;
-	line-height: 2;
+	line-height: 1.4;
 	font-size: 14px; 
 	font-weight: 300;
+	
+	&--no-leading {
+	line-height: 0;	
+	}
+	
+	&--16 {
+	font-size: 16px;
+	}
 	
 	&--18 { 
 	font-size: 18px;	
@@ -13,7 +21,17 @@
 	&--20 {
 	font-size: 20px;	
 	}
+	
+	&--22 {
+	font-size: 22px;	
+	}
+	
+	&--36 {
+	font-size: 36px;	
+	}
+	
 	&--27 {
+		
 	font-size: 27px;
 	
 	@mixin atSmall {
@@ -37,19 +55,22 @@
 	font-weight: 700;
 	}
 	
-	&--16 {
-	font-size: 16px;
+	&--italic {
+	}
 	
-	&--grey {
-	color: $grey;	
+	&--grey1 {
+	color: $grey1;	
 	}
 	
 	&--grey2 {
 	color: $grey2;	
 	}
 	
+	&--light-grey {
+		color: $lightGrey;
+	}
+	
 	&--darkgrey{
 	color: $darkGrey;	
 	}
-} 
 }

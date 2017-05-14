@@ -10,24 +10,11 @@ flex-flow: wrap;
 display: none;	
 }
 }
-
-@mixin atMedium {
-	max-width: 1400px;
-}
-
-&__text-content {
-	z-index: 2;
-		width: 100vw;
-		top: 140px;
-		display: flex;
-		
-		@mixin atSmall {
-		display: block;	
-		}
-}	
 }
 
 .card {
+	margin-top: 100px;
+	cursor: pointer;
 	box-sizing: border-box;
 	width: 100%;
 	display: inline-block;
@@ -36,31 +23,71 @@ display: none;
 	color: #333333;
 	text-align: center;
 	background: white;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: cover;
 	
-	@mixin atMedium {
+	box-shadow: 0;
+	transition: box-shadow .3s ease-in-out;
+	
+	
+	
+	&:hover{
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+	
+	@mixin atSmall {
 	width: 48%;
+	height: 46vw;
 	}
 	
 	@mixin atLarge {
-	width: 30%;	
-	height: 500px;
+	width: 31.5%;
+	height: 30vw;
+	max-width: 346.5px;
+	max-height: 412.49px;
 	}
+	
+	&__content {
+	height: 35%;
+	box-sizing: border-box;
+	/*padding-top: 7px;*/
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+
+	}
+	
+	&__content__wrap {
+	width: 100%;
+	}
+	
+	&__image {
+	/*filter: grayscale(100%);*/
+	width: 100%;
+	height: 65%;	
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: cover;
+	background-repeat: none;
+	}
+	
+	
+	
+	&__animation {
+	background:url(/assets/images/bout/bout--color.jpg);
+	height: 65%;
+	background-size: cover;
+	background-position-x: .5%;
+	animation: play 3s steps(4) infinite;	
+
+	}
+}
+	
+	
 	
 	/* image url on site host 
 	
 	&--FedWatch {
 	background-image: ../../images/plainsmen-logo.jpg;
 	} */
-
-	}
-	
-	/*using nth child so cards have more leading between them –> as opposed to cards and header "portfolio".
-	sloppy, should figure out a better solution*/
-	
-.card:nth-child(1n+4) {
-	margin-top: 50px;	
-}

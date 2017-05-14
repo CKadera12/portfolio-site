@@ -7,20 +7,12 @@
  <meta name="keywords" content="Wyoming illustration, Wyoming design, coding, UFC art, UFC illustration, UFC design, ">
   <meta name="description" content="Clint likes to illustrate, design, and code. He was born in the frozen tundra of Wyoming.">
 <!--google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Open+Sans:300,600, 700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Open+Sans:300, 300i, 600, 700" rel="stylesheet">
 
 <!--normalize.css style sheet-->
 <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
 
 </head>
-
-<body>
-<div class="modal wrapper">
-<div class="modal__close">X</div>
-<article class="modal__resume"></article>
-</div>
-<div class="max-min">
-<!--hero section-->
 <section class="hero">
 <div class="hero__image-content--right">
     <img class ="hero__image--right" src="assets/images/header/hero__right.png" alt="Wyoming illustration">
@@ -35,42 +27,63 @@
     <header>
         <h1 class="merriweather merriweather--36 merriweather--heavy">Hi, I'm Clint <span>:)</span></h1>
     </header>
-        <p class="hero__text open-sans open-sans--regular open-sans--18 open-sans--darkgrey">
-        I'm an illustrator, designer, and coder from <b>Wyoming.</b>
+   
+        <p class="hero__text open-sans open-sans--regular open-sans--18 open-sans--darkgrey line-height--18">
+        I'm an illustrator, designer, and coder from Wyoming.
         If you're hiring full-time, I'd love to be considered!
         </p>
-        <div class= "button margin--top--35 mdl-ripple open-modal" >Résumé
+        <p class= "button margin--top--35 mdl-ripple open-modal">Résumé
         </div>
         </div>
-</div>
 </section>
+<body>
+<div class="modal wrapper">
+<div class="modal__close"><p>X</p></div>
+<article class="modal__resume"></article>
+</div>
+<!--hero section-->
+
 
 <!--portfolio section-->
-
 <section>
+
 <div class="portfolio">
 <div class="wrapper">
 
-    <article class="project"></article>
-
-     <h2 class="open-sans open-sans--27">Portfolio</h2>
-    <!--_portfolio.css is parent that allows "card" to use flexblock-->
-    <div class="gallery gallery--is-visible">
-    
-    <div class="card" data-folder="{{project.folder}}">
-    <h3 class="open-sans open-sans--18 open-sans--bold">Fighters</h3>
-    <p class="open-sans open-sans--18">Fullstack app development</p>
+  <h2 class="open-sans open-sans--27 open-sans--semi-bold margin--top--35 margin--bottom--35 column--100 portfolio__header">Portfolio</h2>
+    <div class="project">
     </div>
    
-    <div class="card" data-folder="{{project.folder}}">
-    <h3 class="open-sans open-sans--18 open-sans--bold">FedWatch</h3>
-    <p class="open-sans open-sans--18">Social media campaign design</p>
-    </div>
+    <!--_portfolio.css is parent that allows "card" to use flexblock-->
+    <div class="gallery gallery--is-visible">
      
-    <div class="card" data-folder="{{project.folder}}">
-    <h3 class="open-sans open-sans--18 open-sans--bold">Pyscho</h3>
-    <p class="open-sans open-sans--18">Graphite illustration</p>
+    <figure class="card" id="fedwatch">
+    <div class="card__image" style="background-image:url(/assets/images/fedwatch/fedwatch__instagram--franklin.jpg)"></div>
+    <figcaption class="card__content">
+    <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--20 open-sans--bold">FedWatch</h3>
+    <p class="open-sans open-sans--20">Social media campaign design</p>
     </div>
+    </figcaption>
+    </figure>
+    
+    <figure class="card" id="bout">
+    <div class="card__animation"></div>
+     <figcaption class="card__content">
+    <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--20 open-sans--bold">Bout</h3>
+    <p class="open-sans open-sans--20">Full-stack app development</p>
+    </div>
+    </figcaption>
+    </figure>
+   
+      <figure class="card" data-folder="{{project.folder}}">
+    <div class="card__image" style="background-image:url(/assets/images/plainsmen-logo.jpg)"></div>
+    <figcaption>
+    <h3 class="open-sans open-sans--20 open-sans--bold">Psycho</h3>
+    <p class="open-sans open-sans--20">Graphite illustration</p>
+    </figcaption>
+    </figure>
     
      <div class="card" data-folder="{{project.folder}}">
     <h3 class="open-sans open-sans--18 open-sans--bold">Laramie Wrestling</h3>
@@ -102,20 +115,20 @@
 <section class="contact">
 <div class="contact__text-content">
 <div class="wrapper">
-<h2 class="section-title">Contact</h2>
+<h2 class="open-sans open-sans--27">Contact</h2>
 <p class="open-sans open-sans--18">My email is <a href="mailto:contact@clintkadera.com"> contact@clintkadera.com</a>, or you can message me below!</p>
 <form class="open-sans open-sans--18 contact__form" action="where sending the info" method="POST">
 <input class="contact__name" type="text" placeholder="Name" name="name">
 <input class="contact__email" type="email" placeholder="Email" name="email">
 <textarea class="contact__message" rows="5" cols="50" placeholder="Message" name="message"></textarea>
-<input class="button button--margin-top button--margin-bottom" type="submit" value="Sumbmit">
+<input class="button button--margin-top button--margin-bottom" type="submit" value="Submit">
+
 </form>
 </div>
 </div>
 </section>
 
 </div>
-
 <script src="/temp/scripts/App.js"></script>
 </body>
 </html> 

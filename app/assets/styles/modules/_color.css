@@ -1,0 +1,9 @@
+.color {
+	&--grey1 {
+	color: $grey1;	
+	}
+	
+	&--dark-grey {
+	color: $darkGrey;	
+	}
+}

@@ -9917,7 +9917,8 @@ var Modal = function () {
 		this.modal = (0, _jquery2.default)(".modal");
 		this.resumeContainer = (0, _jquery2.default)(".modal__resume");
 		this.closeModalButton = (0, _jquery2.default)(".modal__close");
-		this.resume = "/assets/styles/work/resume.html";
+		this.body = (0, _jquery2.default)("body");
+		this.resume = "/assets/ajax/resume.html";
 		this.events();
 	}
 
@@ -9937,12 +9938,14 @@ var Modal = function () {
 		key: "keyPressHandler",
 		value: function keyPressHandler(e) {
 			if (e.keyCode == 27) {
+				console.log("esc pressed");
 				this.closeModal();
 			}
 		}
 	}, {
 		key: "openModal",
 		value: function openModal() {
+			this.body.addClass("no-scrolling");
 			this.modal.addClass("modal--is-visible");
 			this.resumeContainer.load(this.resume);
 		}
@@ -9950,6 +9953,7 @@ var Modal = function () {
 		key: "closeModal",
 		value: function closeModal() {
 			this.modal.removeClass("modal--is-visible");
+			this.body.removeClass("no-scrolling");
 		}
 	}]);
 
@@ -9980,25 +9984,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Project = function () {
-	function Project() {
+	function Project(element) {
 		_classCallCheck(this, Project);
 
-		this.card = (0, _jquery2.default)(".card");
+		this.clickElement = element;
 		this.portfolio = (0, _jquery2.default)(".gallery");
 		this.project = (0, _jquery2.default)(".project");
-
+		this.heading = (0, _jquery2.default)(".portfolio__header");
 		this.events();
 	}
 
 	_createClass(Project, [{
 		key: "events",
 		value: function events() {
-			this.card.click(this.toggleTheMenu.bind(this));
+			this.clickElement.click(this.toggleTheMenu.bind(this));
 		}
 	}, {
 		key: "toggleTheMenu",
 		value: function toggleTheMenu() {
-
+			this.heading.toggleClass("project__close");
 			this.project.toggleClass("project--is-visible");
 			this.portfolio.toggleClass("gallery--is-visible");
 		}
@@ -10082,6 +10086,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -10090,17 +10096,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var WorkLoad = function WorkLoad() {
-	_classCallCheck(this, WorkLoad);
+var WorkLoad = function () {
+	function WorkLoad(cardID, file) {
+		_classCallCheck(this, WorkLoad);
 
-	_jquery2.default.ajaxSetup({ cache: true });
-	(0, _jquery2.default)(".card").click(function () {
+		_jquery2.default.ajaxSetup({ cache: true });
+		this.card = cardID;
+		this.project = (0, _jquery2.default)(".project");
+		this.newHTML = "/assets/ajax/" + file;
 
-		var newHTML = "/assets/styles/work/fedwatch.html";
+		this.events();
+	}
 
-		(0, _jquery2.default)(".project").load(newHTML);
-	});
-};
+	_createClass(WorkLoad, [{
+		key: "events",
+		value: function events() {
+			this.card.click(this.loadProject.bind(this));
+		}
+	}, {
+		key: "loadProject",
+		value: function loadProject() {
+			console.log(this.card);
+			this.project.load(this.newHTML);
+		}
+	}]);
+
+	return WorkLoad;
+}();
 
 exports.default = WorkLoad;
 
@@ -10115,13 +10137,13 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _Project = __webpack_require__(2);
-
-var _Project2 = _interopRequireDefault(_Project);
-
 var _WorkLoad = __webpack_require__(4);
 
 var _WorkLoad2 = _interopRequireDefault(_WorkLoad);
+
+var _Project = __webpack_require__(2);
+
+var _Project2 = _interopRequireDefault(_Project);
 
 var _RevealOnScroll = __webpack_require__(3);
 
@@ -10133,9 +10155,11 @@ var _Modal2 = _interopRequireDefault(_Modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var workLoad = new _WorkLoad2.default();
-var project = new _Project2.default();
-new _RevealOnScroll2.default((0, _jquery2.default)(".card"), "90%");
+new _WorkLoad2.default((0, _jquery2.default)("#fedwatch"), "fedwatch.html");
+new _WorkLoad2.default((0, _jquery2.default)("#bout"), "bout.html");
+new _Project2.default((0, _jquery2.default)(".card"));
+new _Project2.default((0, _jquery2.default)(".project__close"));
+//new RevealOnScroll($(".card"), "90%");  
 var modal = new _Modal2.default();
 
 /***/ }),
