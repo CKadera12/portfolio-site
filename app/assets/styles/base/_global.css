@@ -34,7 +34,7 @@ margin: 0;
 }
 
 figcaption {
-padding: 5px 0px;
+padding: 10px 0px;
 
 }
 
@@ -43,7 +43,9 @@ a {
 color: inherit;
 text-decoration: inherit;
 font-weight: 400;
+transition: color .25s ease-out;
+
 &:hover {
-color: black;	
+color: black;
 }
 }

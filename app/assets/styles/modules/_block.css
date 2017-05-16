@@ -1,6 +1,15 @@
 .block {
 width: 100%;
 text-align: center;
+
+	&__animation--desktop {
+	background:url(/assets/images/fedwatch/fedwatch--social-media-screens.jpg);
+	background-position: 1% 11%;
+	background-size: auto 63%;
+	background-repeat: no-repeat;
+	animation: two-frames 5s steps(2) infinite;	
+	}
+	
 	&__content {
 		
 	padding: 60px 0px;
@@ -10,7 +19,8 @@ flex-wrap: wrap;
 justify-content: space-between;
 	
 	&__wrap {
-
+	flex-basis: 100%;
+	
 	&--50{
 	padding-top: 50px;
 	@mixin atMedium{

@@ -9990,19 +9990,18 @@ var Project = function () {
 		this.clickElement = element;
 		this.portfolio = (0, _jquery2.default)(".gallery");
 		this.project = (0, _jquery2.default)(".project");
-		this.heading = (0, _jquery2.default)(".portfolio__header");
 		this.events();
 	}
 
 	_createClass(Project, [{
 		key: "events",
 		value: function events() {
-			this.clickElement.click(this.toggleTheMenu.bind(this));
+			/*this.clickElement.live("click", this.toggleTheMenu.bind(this));*/
+			this.clickElement.click("click", this.toggleTheMenu.bind(this));
 		}
 	}, {
 		key: "toggleTheMenu",
 		value: function toggleTheMenu() {
-			this.heading.toggleClass("project__close");
 			this.project.toggleClass("project--is-visible");
 			this.portfolio.toggleClass("gallery--is-visible");
 		}
@@ -10116,7 +10115,6 @@ var WorkLoad = function () {
 	}, {
 		key: "loadProject",
 		value: function loadProject() {
-			console.log(this.card);
 			this.project.load(this.newHTML);
 		}
 	}]);
@@ -10156,9 +10154,13 @@ var _Modal2 = _interopRequireDefault(_Modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 new _WorkLoad2.default((0, _jquery2.default)("#fedwatch"), "fedwatch.html");
+new _WorkLoad2.default((0, _jquery2.default)("#tonyhinchcliffe"), "tony-hinchcliffe.html");
+new _WorkLoad2.default((0, _jquery2.default)("#brandoningram"), "brandon-ingram.html");
 new _WorkLoad2.default((0, _jquery2.default)("#bout"), "bout.html");
+/*new Project($(".portfolio__header"), "Portfolio");*/
 new _Project2.default((0, _jquery2.default)(".card"));
-new _Project2.default((0, _jquery2.default)(".project__close"));
+new _Project2.default((0, _jquery2.default)(".project__header"));
+
 //new RevealOnScroll($(".card"), "90%");  
 var modal = new _Modal2.default();
 

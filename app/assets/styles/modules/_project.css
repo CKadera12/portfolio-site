@@ -16,14 +16,6 @@ z-index: -1;
 /*background: white;*/
 }
 
-&__desktop-animation {
-background:url(/assets/images/fedwatch/fedwatch--social-media-screens.jpg);
-background-position: 1% 11%;
-background-size: auto 63%;
-background-repeat: no-repeat;
-animation: two-frames 5s steps(2) infinite;	
-}
-
 &__header {
 flex-basis: 100%;
 margin-top: 50px;
@@ -33,6 +25,7 @@ margin-bottom: 20px;
 &__close {
 text-align: center;
 cursor: pointer;
+pointer-events: none;
 display: block;
 font-size: 20px;	
 padding-bottom: 20px;

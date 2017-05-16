@@ -18,7 +18,6 @@ events(){
 
 
 loadProject() {
-console.log(this.card);
 this.project.load(this.newHTML);
 }
 }
