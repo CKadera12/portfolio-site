@@ -10,6 +10,10 @@ text-align: center;
 	animation: two-frames 5s steps(2) infinite;	
 	}
 	
+	&__background-video {
+	position: relative;	
+	z-index: -5;
+	}
 	&__content {
 		
 	padding: 60px 0px;
@@ -22,11 +26,10 @@ justify-content: space-between;
 	flex-basis: 100%;
 	
 	&--50{
-	padding-top: 50px;
 	@mixin atMedium{
 	padding: 0;
 	flex-basis: 49.4%;
-	flex-direction: row;
+	flex-direction: column;
 flex-wrap: wrap;
 justify-content: space-between;
 	
@@ -35,7 +38,7 @@ justify-content: space-between;
 	
 	&--33{
 	@mixin atSmall{
-	flex-basis: 31%;
+	flex-basis: 32.5%;
 	}
 	}
 	
@@ -45,7 +48,13 @@ justify-content: space-between;
 	flex-basis: 24%;
 	flex-direction: column;
 	justify-content: space-between;
+	
+	&--no-flex{
+	display: inline-block;	
 	}
+	}
+	
+	
 	
 	&--20 {
 	flex-basis: 19%;	

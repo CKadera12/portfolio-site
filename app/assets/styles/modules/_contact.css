@@ -51,6 +51,7 @@
 		
 	&__message {
 		padding-top: 15px;
+		margin-bottom: 35px;
 		border: none;
 		flex-basis: 100%;
 

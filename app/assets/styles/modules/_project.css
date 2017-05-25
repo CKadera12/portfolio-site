@@ -22,9 +22,7 @@ margin-top: 50px;
 margin-bottom: 20px;
 }
 
-&__close {
-text-align: center;
-cursor: pointer;
+&__view {
 pointer-events: none;
 display: block;
 font-size: 20px;	

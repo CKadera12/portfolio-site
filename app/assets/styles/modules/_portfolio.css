@@ -10,4 +10,10 @@ flex-flow: wrap;
 __header {
 	
 }
+
+&__view {
+pointer-events: none;
 }
+}
+
+

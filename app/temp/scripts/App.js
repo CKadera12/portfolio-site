@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9898,6 +9898,59 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Form = function Form() {
+	_classCallCheck(this, Form);
+
+	this.contactForm = (0, _jquery2.default)(".contact__form");
+	this.contactForm.on("submit", function () {
+		(0, _jquery2.default)(".contact__greeting").text("Message Sent! I'll get back to you soon.");
+		var that = (0, _jquery2.default)(this),
+		    url = that.attr("action"),
+		    type = that.attr("method"),
+		    data = {};
+
+		that.find("[name]").each(function () {
+			var that = (0, _jquery2.default)(this),
+			    name = that.attr("name"),
+			    value = that.val();
+
+			data[name] = value;
+		});
+
+		_jquery2.default.ajax({
+			url: url,
+			type: type,
+			data: data,
+			success: function success(response) {
+				console.log(response);
+			}
+		});
+
+		return false;
+	});
+};
+
+exports.default = Form;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _jquery = __webpack_require__(0);
@@ -9925,6 +9978,7 @@ var Modal = function () {
 	_createClass(Modal, [{
 		key: "events",
 		value: function events() {
+
 			//clicking the open modal button
 			this.openModalButton.click(this.openModal.bind(this));
 
@@ -9963,7 +10017,71 @@ var Modal = function () {
 exports.default = Modal;
 
 /***/ }),
-/* 2 */
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Navigation = function () {
+	function Navigation() {
+		_classCallCheck(this, Navigation);
+
+		this.project = (0, _jquery2.default)(".project");
+		this.returnToGallery = (0, _jquery2.default)(".back");
+		this.portfolio = (0, _jquery2.default)(".gallery");
+
+		this.events();
+	}
+
+	_createClass(Navigation, [{
+		key: "events",
+		value: function events() {
+			console.log(this.project);
+			this.project.on("click", this.returnToGallery, this.console.bind(this));
+		}
+	}, {
+		key: "console",
+		value: function (_console) {
+			function console() {
+				return _console.apply(this, arguments);
+			}
+
+			console.toString = function () {
+				return _console.toString();
+			};
+
+			return console;
+		}(function () {
+
+			console.log("back button works");
+
+			this.project.toggleClass("project--is-visible");
+			this.portfolio.toggleClass("gallery--is-visible");
+		})
+	}]);
+
+	return Navigation;
+}();
+
+exports.default = Navigation;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9990,6 +10108,8 @@ var Project = function () {
 		this.clickElement = element;
 		this.portfolio = (0, _jquery2.default)(".gallery");
 		this.project = (0, _jquery2.default)(".project");
+		this.returnToGallery = (0, _jquery2.default)(".back");
+		this.portfolioHeader = (0, _jquery2.default)(".portfolio__header");
 		this.events();
 	}
 
@@ -9997,11 +10117,18 @@ var Project = function () {
 		key: "events",
 		value: function events() {
 			/*this.clickElement.live("click", this.toggleTheMenu.bind(this));*/
-			this.clickElement.click("click", this.toggleTheMenu.bind(this));
+			this.clickElement.click(this.toggleTheMenu.bind(this));
 		}
 	}, {
 		key: "toggleTheMenu",
 		value: function toggleTheMenu() {
+			if (this.portfolioHeader.text() == "Portfolio") {
+				this.portfolioHeader.text("Return to Gallery");
+			} else {
+				this.portfolioHeader.text("Portfolio");
+			}
+
+			this.portfolioHeader.toggleClass("portfolio__view");
 			this.project.toggleClass("project--is-visible");
 			this.portfolio.toggleClass("gallery--is-visible");
 		}
@@ -10013,7 +10140,7 @@ var Project = function () {
 exports.default = Project;
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10029,7 +10156,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(6);
+var _noframework = __webpack_require__(8);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
@@ -10075,7 +10202,7 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10125,7 +10252,7 @@ var WorkLoad = function () {
 exports.default = WorkLoad;
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10135,21 +10262,29 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _WorkLoad = __webpack_require__(4);
+var _WorkLoad = __webpack_require__(6);
 
 var _WorkLoad2 = _interopRequireDefault(_WorkLoad);
 
-var _Project = __webpack_require__(2);
+var _Project = __webpack_require__(4);
 
 var _Project2 = _interopRequireDefault(_Project);
 
-var _RevealOnScroll = __webpack_require__(3);
+var _RevealOnScroll = __webpack_require__(5);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
-var _Modal = __webpack_require__(1);
+var _Modal = __webpack_require__(2);
 
 var _Modal2 = _interopRequireDefault(_Modal);
+
+var _Form = __webpack_require__(1);
+
+var _Form2 = _interopRequireDefault(_Form);
+
+var _Navigation = __webpack_require__(3);
+
+var _Navigation2 = _interopRequireDefault(_Navigation);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10157,15 +10292,17 @@ new _WorkLoad2.default((0, _jquery2.default)("#fedwatch"), "fedwatch.html");
 new _WorkLoad2.default((0, _jquery2.default)("#tonyhinchcliffe"), "tony-hinchcliffe.html");
 new _WorkLoad2.default((0, _jquery2.default)("#brandoningram"), "brandon-ingram.html");
 new _WorkLoad2.default((0, _jquery2.default)("#bout"), "bout.html");
-/*new Project($(".portfolio__header"), "Portfolio");*/
+new _WorkLoad2.default((0, _jquery2.default)("#49ers"), "49ers.html");
 new _Project2.default((0, _jquery2.default)(".card"));
-new _Project2.default((0, _jquery2.default)(".project__header"));
+new _Project2.default((0, _jquery2.default)(".portfolio__header"));
 
 //new RevealOnScroll($(".card"), "90%");  
 var modal = new _Modal2.default();
+var form = new _Form2.default();
+var navigation = new _Navigation2.default();
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /*!

@@ -3,7 +3,7 @@
 	font-family: Open Sans, Helvetica, sans serif;
 	color: $grey;
 	line-height: 1.4;
-	font-size: 14px; 
+	font-size: 12px; 
 	font-weight: 300;
 	
 	&--no-leading {

@@ -3,6 +3,10 @@
 	color: $grey1;	
 	}
 	
+	&--grey3 {
+	color: $grey3;	
+	}
+	
 	&--dark-grey {
 	color: $darkGrey;	
 	}
