@@ -1,20 +1,45 @@
 .contact {
+	position: fixed;
+	z-index: -10;
 	margin-top: 150px;
 	padding-top: 30px;
 	width: 100vw;
-	position: relative;
-	background: white;
+/*background-image: url("../../assets/images/header/paint-background.jpg");*/
 	height: 700px;
+	bottom: 0;
 	
 	&__text-content {
+		
 		margin-top: 80px;
 		width: 100vw;
 		top: 140px;
 		display: flex;
 		
 		@mixin atSmall {
-		display: block;	
+		display: block;
 		}
+	}
+	
+	&__foreground {
+		
+	opacity: 2;
+	z-index: 20;
+	width: 120vw;
+	position: absolute;
+	right: -10vw;
+	top: -10vh;	
+	}
+	
+	&__overlay {
+		
+		z-index: -5;
+		background-color:#000;
+		opacity:0.0;
+		position:absolute;
+		top:0;
+		width:100%;
+		height:100%;
+		pointer-events: none;
 	}
 	
 

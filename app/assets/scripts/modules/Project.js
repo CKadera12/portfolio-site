@@ -1,34 +1,44 @@
 import $ from "jquery";
 
 class Project {
-constructor(element) { 
-	this.clickElement = element;
-	this.portfolio = $(".gallery");
-	this.project = $(".project");
-	this.returnToGallery = $(".back");
+constructor(element, parent) { 
+	this.elementClicked = element;
+	this.parentElement = parent;
+	this.portfolio = $(".portfolio");
+	this.gallery = $(".gallery"),
+	this.project = $(".project"),
+	this.returnToGallery = $(".back"),
 	this.portfolioHeader = $(".portfolio__header");
+	
 	this.events();
 }
-
-events() { 
-/*this.clickElement.live("click", this.toggleTheMenu.bind(this));*/
-this.clickElement.click (this.toggleTheMenu.bind(this));
+	
+	events(){
+//this.elementClicked.click(this.toggle.bind(this));
+this.parentElement.on("click", this.elementClicked, this.toggle.bind(this));
+	}
+	
+	
+	toggle() {
+	console.log("working");
+	window.scrollTo(0, 900);
+	this.portfolioHeader.toggleClass("portfolio__view");
+	this.project.toggleClass("project--is-visible");
+	this.gallery.toggleClass("gallery--is-visible");
+	}
 }
 
-toggleTheMenu() {
-	if (this.portfolioHeader.text() == "Portfolio")
+
+export default Project;
+
+
+
+/*
+if (portfolioHeader.text() == "Portfolio")
 	{
-		this.portfolioHeader.text("Return to Gallery");
+		portfolioHeader.text("Return to Gallery");
 	}
 		else
 		{
-		this.portfolioHeader.text("Portfolio");	
-		}
-		
-	this.portfolioHeader.toggleClass("portfolio__view");
-	this.project.toggleClass("project--is-visible");
-	this.portfolio.toggleClass("gallery--is-visible");
-}
-} 
-
-export default Project;
+		portfolioHeader.text("Portfolio");	
+		} */

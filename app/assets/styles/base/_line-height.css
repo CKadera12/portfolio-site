@@ -1,5 +1,5 @@
 .line-height {
-	&--14 {
+	&--1 {
 	line-height: 1;	
 	}
 	&--18 {
@@ -7,6 +7,10 @@
 	}
 	&--2 {
 	line-height: 2;	
+	}
+	
+	&--4 {
+	line-height: 4;	
 	}
 	
 }

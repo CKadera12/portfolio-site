@@ -7,6 +7,20 @@ opacity: 1;
 }
 }
 
+@keyframes blink {
+to{opacity: .0;}	
+}
+
+@keyframes type{ 
+  from { width: 0;} 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
 
 /*Bout thumbnail animation*/
 @keyframes play {
@@ -17,4 +31,23 @@ opacity: 1;
 @keyframes two-frames {
 0% {background-position-x: 0%; }
 100% { background-position-x: 200%;	}
+}
+
+
+@keyframes modal-sequence {
+  0% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+
+@-webkit-keyframes modal-sequence-reverse {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+  }
 }

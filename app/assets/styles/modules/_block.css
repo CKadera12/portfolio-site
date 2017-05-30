@@ -16,7 +16,6 @@ text-align: center;
 	}
 	&__content {
 		
-	padding: 60px 0px;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -32,7 +31,22 @@ justify-content: space-between;
 	flex-direction: column;
 flex-wrap: wrap;
 justify-content: space-between;
+	}
 	
+	&--text{
+	flex-basis: 48%;
+		flex-direction: column;
+flex-wrap: wrap;
+justify-content: space-between;
+	}
+	}
+	
+	&--75{
+	@mixin atSmall{
+	padding: 0;
+	flex-basis: 73%;
+	flex-wrap: wrap;
+	justify-content: space-between;	
 	}
 	}
 	
@@ -95,8 +109,8 @@ justify-content: space-between;
 	
 	
 	
-	&__seperation-line {
-	border-bottom: 1px solid $grey3;	
+	&__separation-line {
+	border-bottom: 1px solid $grey4;	
 	}
 
 &__header {

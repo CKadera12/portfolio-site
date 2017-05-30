@@ -1,7 +1,7 @@
 
 .modal {
 position: fixed;
-z-index: 10;
+z-index: 20;
 background-color: rgba(255,255,255, 1);
 top: 0;
 bottom: 0;
@@ -9,31 +9,89 @@ left: 0;
 right: 0;
 opacity: 0;
 visibility: hidden;
-transform: scale(1.2);
-transition: all .4s ease-out;
+transition: all .9s ease-out;
 
 &--is-visible {
+overflow: auto;
 font-size: 20px;
 font-weight: 600;
 opacity: 1;
 visibility: visible;
-transform: scale(1);
 text-align: left;
 width: 100vw;
+min-width: 1000px;
 }
+
+&__transition-layer {
+	pointer-events: none;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2;
+height: 100%;
+width: 100%;
+opacity: 0;
+visibility: hidden;
+overflow: hidden;	
+
+&--is-visible {
+	opacity: 1;
+	visibility: visible;
+}
+}
+
+&__bg-layer {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translateY(-50%) translateX(-2%);
+height: 100%;
+width: 2500%;
+background-image: url(../../assets/images/modal/ink-bw.png);
+background-size: 100% 100%;
+
+&--opening {
+animation: modal-sequence 0.8s steps(24);
+animation-fill-mode: forwards;
+}
+
+&--closing {
+animation: modal-sequence-reverse 0.8s steps(24);
+animation-fill-mode: forwards;	
+}
+}
+
+
 
 &__close {
+opacity: .6;
 position: absolute;
-top: 45px;
-left: 45px;
-transform: scaleX(1.2);
-transform-origin: 100% 0;
-color: $grey;
+height: 30px;
+width: 30px;
+top: 32px;
+left: 20px;
 cursor: pointer;
+transition: opacity .25s ease-out;
 
 &:hover {
-	color: purple;
+	opacity :1;
 }
+}
+
+&__download {
+opacity: .6;
+position: absolute;
+height: 30px;
+width: 30px;
+top: 32px;
+left: 60px;
+cursor: pointer;
+transition: opacity .25s ease-out;
+
+&:hover {
+	opacity :1;
+}
+
 }
 }
 

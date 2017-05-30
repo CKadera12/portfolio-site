@@ -1,6 +1,6 @@
 body {
 	min-width: 350px;
-	background-color: $grey4;
+	/*background-color: rgba(20, 27, 32, 0.85);*/
 	background-color: $lightGrey;
 	margin: 0; 
 	padding: none;

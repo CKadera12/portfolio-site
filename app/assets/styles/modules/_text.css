@@ -1,0 +1,10 @@
+.text {
+	&--align-center{
+	text-align: center;	
+	}
+	
+	&--size-38 {
+	font-size: 38px;	
+	}
+	
+}

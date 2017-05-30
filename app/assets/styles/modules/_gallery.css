@@ -6,8 +6,10 @@
 justify-content: space-between;	
 flex-flow: wrap;
 
+
 &--is-visible{
-display: flex;	
+display: flex;
+animation: fade 1s ease-out;
 }
 }
 

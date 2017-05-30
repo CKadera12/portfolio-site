@@ -21,4 +21,6 @@
 @import "modules/_block";
 @import "modules/_open-sans";
 @import "base/_line-height";
+@import "modules/_notif";
 @import "modules/_color";
+@import "modules/_text";

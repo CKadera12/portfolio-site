@@ -1,22 +1,59 @@
 .margin {
 	
+	
+	&--bottom--10 {
+	margin-bottom: 10px;	
+	}
+	
+	&--bottom--15{
+	margin-bottom: 15px;	
+	}
+	
+	&--bottom--20{
+	margin-bottom: 20px;	
+	}
+	
+	&--bottom--35 {
+	margin-bottom: 35px;	
+	}
+	
+	&--bottom--50 {
+	margin-bottom: 50px;	
+	}
+	/*previous top--70*/
+	&--bottom--100{
+	margin-bottom: 100px;	
+	}
+	
+	&--top--6{
+	margin-top: 6px;
+	}
+	
+	&--top--10{
+	margin-top: 10px;	
+	}
+	
+	&--top--25 {
+	margin-top: 25px;	
+	}
+	
 	&--top--35{
 	margin-top: 35px;
 	}
 	
-	&--top--70{
+	&--top--40{
+	margin-top: 40px;
+	}
+	
+	&--top--50{
+	margin-top: 50px;
+	}
+	/*previous top--70*/
+	&--top--100{
 	margin-top: 100px;	
 	}
+	
 	&--top--200 {
 	margin-top: 200px;	
-	}
-	&--bottom--35{
-	margin-bottom: 35px;	
-	}
-	
-	&--bottom--70{
-	margin-bottom: 100px;	
-	}
-	
-	
+	}	
 }

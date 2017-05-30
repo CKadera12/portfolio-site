@@ -1,52 +1,115 @@
 .hero {
-	z-index: 5;
+	overflow: hidden;
+	z-index: 1;
 	width: 100vw;
 	position: relative;
-	background: white;
-	height: 680px;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	display: block;
+	/*background-image: url("../../assets/images/header/paint-background.jpg");*/
+	background-color: $lightGrey;
+	background-repeat: repeat;
+	height: 90vh;
+	/*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
 	/* hero images*/
 	
-	&__image-content--right {
-	overflow: hidden;
+	
+	.planet {
+  background-size: cover;
+  position: absolute;
+}
+
+	&__image {
+	z-index: 0;
+	position:absolute;
+	height: 90vh;
+	left: 40vw;
+	top:40%;
+	margin-top:-400px;
+
+	
+	}
+	
+	&__foreground {
+		opacity: 2;
+	z-index: 20;
+	width: 120vw;
 	position: absolute;
-	text-align: center;	
-	left: 50vw;
-	display: none; 
-	z-index: 1;
-	
-	@mixin atMedium {
-		display: block;
-	}
+	right: -10vw;
+	bottom: -10vh;	
 	}
 	
-	&__image--right {
-		height: 680px;
-	}
-	
-	&__image-content--left {
-	overflow: hidden;
+	&__background {
+		
+	z-index: 2;
+	width: 100%;
 	position: absolute;
-	text-align: center;	
-	right: 70vw;
-	display: none;
-	z-index: 1;
+	bottom: 0px;
+	pointer-events: none;
 	
-	@mixin atMedium{
-		display: block;
+	&--right{
+
+	right: -10vw;
+	}
+	
+	&--left{
+	left: 0;	
+	bottom: -10vh;
+	}
+	
+	&--2{
+	margin-top: -10vh;
+	z-index: -5;	
+	height: 120vh;
+	
+	}
+	
+	&--paint {
+		position: absolute;
+		opacity: .5;
+	bottom: 200px;
+	z-index: -10;
 	}
 	}
 	
-	&__image--left {
-		height: 680px;
+	&__rectangle {
+		position: fixed;
+		background-position: fixed;
+		right: 14vw;
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	border: 10px white solid;	
+	}
+	
+	&__arrow {
+		height: 50px;
+		z-index: 20;
+	margin-top: 50px;
+		width: 100%;
+		
+		border-bottom: solid 1px black;
+		bottom: 2vh;	
+	}
+	
+	&__overlay {
+		z-index: -5;
+		background-color:#000;
+		opacity:0.0;
+		position:absolute;
+		top:0;
+		width:100%;
+		height:100%;
+		pointer-events: none;
 	}
 
 	&__text-content {
-		z-index: 2;
+		opacity: 1;
+		max-width: 600px;
+		z-index: 0;
 		position: absolute;
 		width: 100vw;
-		top: 140px;
+		top: 25vh;
 		display: flex;
 		
 		@mixin atSmall {
@@ -55,11 +118,11 @@
 }
 
 &__text {
-		max-width: 340px;
-		
+	max-width: 500px;
+		z-index: -5;
 		@mixin atSmall {
-		text-align: left;
-		max-width: 460px;
+		text-align: left; 
 		}
-	}	
+		
+		}
 }

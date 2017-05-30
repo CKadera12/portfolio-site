@@ -1,5 +1,5 @@
 .button {
-	z-index: 5;
+	z-index: inherit;
 		display: inline-block;
 		cursor: pointer;
 		text-decoration: none;

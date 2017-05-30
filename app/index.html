@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio Website</title>
+<title>Clint Kadera – Portfolio Website</title>
  <meta name="keywords" content="Wyoming illustration, Wyoming design, coding, UFC art, UFC illustration, UFC design, ">
   <meta name="description" content="Clint likes to illustrate, design, and code. He was born in the frozen tundra of Wyoming.">
 <!--google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Open+Sans:300, 300i, 600, 700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,700|Open+Sans:300,400" rel="stylesheet">
 
 <!--normalize.css style sheet-->
 <!-- build:css /assets/styles/styles.css -->
@@ -16,44 +16,65 @@
 
 </head>
 <section class="hero">
-<div class="hero__image-content--right">
-    <img class ="hero__image--right" src="assets/images/header/hero__right.png" alt="Wyoming illustration">
-</div>
+<!--<div class="hero__rectangle"></div>-->
+<div class="hero__overlay"></div>
 
-<div class="hero__image-content--left">
-<img class ="hero__image--left" src="assets/images/header/hero__left.png" alt="Wyoming illustration">
-</div>
+<div id="x-axis" class="axis"></div>
+<div id="y-axis" class="axis"></div>
+
+
+<img class="hero__image planet" src="assets/images/self-portrait-2.png">
+<img class="hero__foreground layer-1" src="assets/images/header/water-transition.png">
+<img class="hero__background hero__background--right layer-2 planet" src="assets/images/header/water-background.png">
+
+<div class="hero__content">
+<img class="hero__background--2 planet layer-3" src="assets/images/header/paint-background.jpg">
    
-    <div class="hero__text-content">
-    <div class="wrapper wrapper--hero">
+    <div class="wrapper">
+    <div class="hero__text-content planet" id="planet-1">
     <header>
-        <h1 class="merriweather merriweather--36 merriweather--heavy">Hi, I'm Clint <span></span></h1>
-    </header>
+        <h1 class="merriweather merriweather--44">Hi, I'm Clint</h1>
    
-        <p class="hero__text open-sans open-sans--regular open-sans--18 open-sans--darkgrey line-height--18">
-        I'm an illustrator and designer from Wyoming.
-        If you're hiring full-time, I'd love to be considered!
-        </p>
-        <p class= "button margin--top--35 mdl-ripple open-modal">Résumé
+        <div class="hero__text open-sans open-sans--22 color--grey1">
+       	<p>I'm an illustrator and designer from Wyoming.</p>
+        <p>If you're hiring full-time, I'd love to be considered!</p>
+        </div>
+        <p class= "button margin--top--35 mdl-ripple open-modal">Résumé</p>
+  
+        </header>
+        </div>
+       
         </div>
         </div>
+
 </section>
 <body>
-<div class="modal wrapper">
-<div class="modal__close"><p>X</p></div>
-<article class="modal__resume"></article>
+<div class="modal">
+
+<a href="http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/lal.png" download>
+<img class="modal__download" src="assets/images/download.svg">
+</a>
+<img class="modal__close" src="assets/images/close.svg">
+<article class="wrapper--modal modal__resume"></article>
+</div>
+
+<div class="modal__transition-layer">
+<div class="modal__bg-layer"></div>
 </div>
 <!--hero section-->
 
 
 <!--portfolio section-->
-<section>
+<section id="gallery">
 
-<div class="portfolio">
+<div class="portfolio padding--top--40">
+<img class="portfolio__foreground" src="assets/images/header/water-transition.png">
+
 <div class="wrapper">
 
   <h2 class="open-sans open-sans--27 margin--top--35 margin--bottom--35 column--100 portfolio__header portfolio__view">Portfolio</h2>
     <div class="project">
+    <div><p>X</p></div>
     </div>
    
     <!--_portfolio.css is parent that allows "card" to use flexblock-->
@@ -63,8 +84,8 @@
     <div class="card__image" style="background-image:url(/assets/video/fedwatch/fed-watch-animation-2.gif)"></div>
     <figcaption class="card__content">
     <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">FedWatch</h3>
-    <p class="open-sans open-sans--20">Social media campaign design</p>
+    <h3 class="merriweather merriweather--20 merriweather--light color--dark-grey">FedWatch</h3>
+    <p class="open-sans open-sans--grey1 open-sans--18">Social media campaign design</p>
     </div>
     </figcaption>
     </figure>
@@ -73,8 +94,8 @@
     <div class="card__animation"></div>
      <figcaption class="card__content">
     <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">Bout</h3>
-    <p class="open-sans open-sans--20">Full-stack app development</p>
+    <h3 class="open-sans open-sans--20 open-sans--regular color--dark-grey">Bout</h3>
+    <p class="hero__text merriweather merriweather--light color--grey1 merriweather--16">Full-stack app development</p>
     </div>
     </figcaption>
     </figure>
@@ -83,8 +104,8 @@
     <div class="card__image" style="background-image:url(/assets/images/brandon-ingram/brandon-ingram.jpg)"></div>
     <figcaption class="card__content">
     <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">Brandon Ingram</h3>
-    <p class="open-sans open-sans--20">Graphite illustration</p>
+    <h3 class="open-sans open-sans--20 open-sans--semi-bold">Brandon Ingram</h3>
+    <p class="hero__text merriweather merriweather--light color--grey1 merriweather--16">Graphite illustration</p>
     </div>
     </figcaption>
     </figure>
@@ -93,8 +114,8 @@
     <div class="card__image" style="background-image:url(/assets/images/tony-hinchcliffe/hinchcliffe-bw.jpg)"></div>
     <figcaption class="card__content">
     <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">Tony Hinchcliffe</h3>
-    <p class="open-sans open-sans--20">Hand-lettering illustration</p>
+    <h3 class="open-sans open-sans--20 open-sans--semi-bold">Tony Hinchcliffe</h3>
+    <p class="hero__text merriweather merriweather--light color--grey1 merriweather--16">Hand-lettering illustration</p>
     </div>
     </figcaption>
     </figure>
@@ -103,8 +124,8 @@
     <div class="card__image" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
     <figcaption class="card__content">
     <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--regular">San Franscisco 49ers Locker Room</h3>
-    <p class="open-sans open-sans--20">Mural design</p>
+    <h3 class="merriweather merriweather--light color--grey merriweather--16">San Franscisco 49ers Locker Room</h3>
+    <p class="hero__text merriweather open-sans open-sans--16 color--grey1">Mural design</p>
     </div>
     </figcaption>
     </figure>
@@ -118,6 +139,8 @@
 
 <!--contact section-->
 <section class="contact">
+<div class="contact__overlay"></div>
+
 <div class="contact__text-content">
 <div class="wrapper">
 <h2 class="open-sans open-sans--27">Contact</h2>
@@ -129,9 +152,6 @@
 <input class="contact__send button button--margin-top button--margin-bottom" type="submit" value="Send">
 
 </form>
-<footer>
-<h4 class="open-sans open-sans--16 margin--top--200">This site was created using <a href="https://www.youtube.com/watch?v=A4R8Y4XSGMk" target="_blank">Initech</a></h4>
-</footer>
 </div>
 </div>
 </section>

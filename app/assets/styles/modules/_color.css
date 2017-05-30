@@ -1,6 +1,14 @@
 .color {
+	&--grey {
+	color: $grey;		
+	}
+	
 	&--grey1 {
 	color: $grey1;	
+	}
+	
+	&--grey2 {
+	color: $grey2;	
 	}
 	
 	&--grey3 {
