@@ -1,8 +1,10 @@
 import $ from "jquery";
 
-
 class Fade {
 	constructor() {
+		
+		//$('.card').addClass('reveal-item');
+		
     $(window).scroll(function () {
         var currentScrollTop = $(window).scrollTop();
 
@@ -19,6 +21,10 @@ class Fade {
 		 }
 		 else {
 			 $('.hero__text-content, .hero__image, .hero__background--2').css('opacity', 1);
+		 }
+		 
+		 if(currentScrollTop > $('.card').offset().top) {
+		$('.card').addClass("reveal-item--is-visible");		 
 		 }
 		 
 		$('.hero__text-content').css({

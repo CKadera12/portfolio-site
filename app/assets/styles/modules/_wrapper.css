@@ -17,5 +17,6 @@ max-width: 980px;
 	
 	&--modal {
 	max-width: none;	
+	min-width: 1000px;
 	}
 }

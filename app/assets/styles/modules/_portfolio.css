@@ -5,6 +5,8 @@ background: white;
 margin-bottom: 1000px;
 padding-bottom: 200px;
 padding-top: 100px;
+
+
 ;
 @mixin atSmall {
 	width: 100%;
@@ -20,13 +22,26 @@ transform:scaleY(-1);
 	width: 120vw;
 	position: absolute;
 	right: -10vw;
-	bottom: -28vh;
+	bottom: -34vh;
 }
 
 &__view {
-
 pointer-events: none;
+}
 
+&__visible {
+	
+}
+
+&__header {
+cursor: pointer;
+color: inherit;
+transition: color .25s ease-out;
+
+
+&:hover {
+color: black;
+}
 }
 }
 

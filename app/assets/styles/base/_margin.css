@@ -17,10 +17,14 @@
 	margin-bottom: 35px;	
 	}
 	
+	&--bottom--40 {
+	margin-bottom: 40px;	
+	}
+	
 	&--bottom--50 {
 	margin-bottom: 50px;	
 	}
-	/*previous top--70*/
+	
 	&--bottom--100{
 	margin-bottom: 100px;	
 	}
@@ -31,6 +35,10 @@
 	
 	&--top--10{
 	margin-top: 10px;	
+	}
+	
+	&--top--20{
+	margin-top: 20px;	
 	}
 	
 	&--top--25 {
@@ -48,7 +56,11 @@
 	&--top--50{
 	margin-top: 50px;
 	}
-	/*previous top--70*/
+	
+	&--top--75{
+	margin-top: 75px;	
+	}
+	
 	&--top--100{
 	margin-top: 100px;	
 	}

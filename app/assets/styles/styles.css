@@ -2,9 +2,10 @@
 @import "base/_variables.css";
 @import "base/_mixins.css";
 @import "base/_global.css";
-@import "base/_margin.css";
+
 @import "base/_animations";
 @import "base/_padding";
+@import "base/_margin";
 
 @import "modules/_hero";
 @import "modules/_button";
@@ -16,10 +17,10 @@
 @import "modules/_gallery";
 @import "modules/_merriweather";
 @import "modules/_reveal-item";
-@import "modules/_modal";
 @import "modules/_no-scrolling";
 @import "modules/_block";
 @import "modules/_open-sans";
+@import "modules/_modal";
 @import "base/_line-height";
 @import "modules/_notif";
 @import "modules/_color";

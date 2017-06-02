@@ -3,127 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio Website</title>
+<title>Clint Kadera – Portfolio Website</title>
  <meta name="keywords" content="Wyoming illustration, Wyoming design, coding, UFC art, UFC illustration, UFC design, ">
   <meta name="description" content="Clint likes to illustrate, design, and code. He was born in the frozen tundra of Wyoming.">
 <!--google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Open+Sans:300, 300i, 600, 700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,700|Open+Sans:300, 300i, 400" rel="stylesheet">
 
 <!--normalize.css style sheet-->
-<link rel="stylesheet" href="/assets/styles/styles-838605833c.css"/>
+<link rel="stylesheet" href="/assets/styles/styles-73abe4735c.css"/>
 
 </head>
 <section class="hero">
-<div class="hero__image-content--right">
-    <img class ="hero__image--right" src="assets/images/header/hero__right.png" alt="Wyoming illustration">
-</div>
+<!--<div class="hero__rectangle"></div>-->
+<div class="hero__overlay"></div>
 
-<div class="hero__image-content--left">
-<img class ="hero__image--left" src="assets/images/header/hero__left.png" alt="Wyoming illustration">
-</div>
+<div id="x-axis" class="axis"></div>
+<div id="y-axis" class="axis"></div>
+
+<!--<div class="hero__frame layer-1"></div>-->
+<img class="hero__image planet" src="assets/images/self-portrait-2.png">
+<img class="hero__foreground layer-1" src="assets/images/header/water-transition.png">
+<img class="hero__background hero__background--right layer-2 planet" src="assets/images/header/water-background.png">
+
+<div class="hero__content">
+<img class="hero__background--2 planet layer-3" src="assets/images/header/paint-background.jpg">
    
-    <div class="hero__text-content">
-    <div class="wrapper wrapper--hero">
+    <div class="wrapper">
+    <div class="hero__text-content planet" id="planet-1">
     <header>
-        <h1 class="merriweather merriweather--36 merriweather--heavy">Hi, I'm Clint <span>:)</span></h1>
-    </header>
+        <h1 class="merriweather merriweather--44">Hi, I'm Clint</h1>
    
-        <p class="hero__text open-sans open-sans--regular open-sans--18 open-sans--darkgrey line-height--18">
-        I'm an illustrator, designer, and coder from Wyoming.
-        If you're hiring full-time, I'd love to be considered!
-        </p>
-        <p class= "button margin--top--35 mdl-ripple open-modal">Résumé
+        <div class="hero__text open-sans open-sans--22 color--grey1">
+       	<p>I'm an illustrator and designer from Wyoming.</p>
+        <p>If you're hiring full-time, I'd love to be considered!</p>
+        </div>
+        <p class= "button margin--top--35 mdl-ripple open-modal">Résumé</p>
+  
+        </header>
+        </div>
+       
         </div>
         </div>
+
 </section>
 <body>
-<div class="modal wrapper">
-<div class="modal__close"><p>X</p></div>
-<article class="modal__resume"></article>
+<div class="modal">
+
+<a href="http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/lal.png" download>
+<img class="modal__download modal__icon" src="assets/images/download.svg">
+</a>
+<img class="modal__close modal__icon" src="assets/images/close.svg">
+<article class="wrapper--modal modal__resume"></article>
+
+</div>
+
+<div class="modal__transition-layer">
+<div class="modal__bg-layer"></div>
 </div>
 <!--hero section-->
 
 
 <!--portfolio section-->
-<section>
+<section id="gallery">
 
-<div class="portfolio">
+<div class="portfolio padding--top--40">
+<img class="portfolio__foreground" src="assets/images/header/water-transition.png">
+
 <div class="wrapper">
 
-  <h2 class="open-sans open-sans--27 open-sans--semi-bold margin--top--35 margin--bottom--35 column--100 portfolio__header project__view">Portfolio</h2>
     <div class="project">
     </div>
    
     <!--_portfolio.css is parent that allows "card" to use flexblock-->
     <div class="gallery gallery--is-visible">
+    <!--<h2 class="open-sans open-sans--50 margin--top--35 column--100 color--grey3 portfolio__header portfolio__view padding--bottom--50">Portfolio</h2>-->
      
-    <figure class="card" id="fedwatch">
-    <div class="card__image" style="background-image:url(/assets/video/fedwatch/fed-watch-animation-2.gif)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">FedWatch</h3>
-    <p class="open-sans open-sans--20">Social media campaign design</p>
+     
+     
+     <!------------------------------------------design section------------------------------------------>
+<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--top--100 block__separation-line">Portfolio</h2>
+<figure class="block__content margin--top--20 margin--bottom--100 ">
+
+
+<div class="block__content__wrap block__content__wrap--32">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image card__animation" id="bout"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="card__contentopen-sans open-sans--regular open-sans--dark-grey open-sans--18">Bout</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Full-stack app development</p>
     </div>
     </figcaption>
     </figure>
+    </div>
     
-    <figure class="card" id="bout">
-    <div class="card__animation"></div>
-     <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">Bout</h3>
-    <p class="open-sans open-sans--20">Full-stack app development</p>
+<div class="block__content__wrap block__content__wrap--32">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image id="fedwatch"" style="background-image:url(assets/video/fedwatch/fed-watch-animation-2.gif)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">FedWatch</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Social media campaign design</p>
     </div>
     </figcaption>
     </figure>
+    </div>
     
-        <figure class="card" id="brandoningram">
-    <div class="card__image" style="background-image:url(/assets/images/brandon-ingram/brandon-ingram.jpg)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">Brandon Ingram</h3>
-    <p class="open-sans open-sans--20">Graphite illustration</p>
+    <div class="block__content__wrap block__content__wrap--32">
+    <figure class="card">
+    <div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image" id="49ers" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--16">49ers Locker Room Wrap</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Mural Design</p>
     </div>
     </figcaption>
     </figure>
-    
-       <figure class="card" id="tonyhinchcliffe">
-    <div class="card__image" style="background-image:url(/assets/images/tony-hinchcliffe/hinchcliffe-bw.jpg)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--bold">Tony Hinchcliffe</h3>
-    <p class="open-sans open-sans--20">Hand-lettering illustration</p>
+    </div>
+</figure>
+
+
+     <!------------------------------------------illustration section------------------------------------------>
+<figure class="block__content">
+
+
+<div class="block__content__wrap block__content__wrap--33">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image" id="tonyhinchcliffe" style="background-image:url(assets/images/tony-hinchcliffe/hinchcliffe-bw.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">Tony Hinchcliffe</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Hand-lettering illustration</p>
     </div>
     </figcaption>
     </figure>
-   
-      <figure class="card" id="laramiewrestling">
-    <div class="card__image" style="background-image:url(/assets/images/plainsmen-logo.jpg)"></div>
-    <figcaption>
-    <h3 class="open-sans open-sans--20 open-sans--bold">Laramie Wrestling</h3>
-    <p class="open-sans open-sans--20">sports logo / wordmark design</p>
+    </div>
+    
+<div class="block__content__wrap block__content__wrap--33">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image id="fedwatch"" style="background-image:url(assets/images/brandon-ingram/brandon-ingram.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">FedWatch</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Social media campaign design</p>
+    </div>
     </figcaption>
     </figure>
-    
-     <div class="card" data-folder="{{project.folder}}">
-    <h3 class="open-sans open-sans--18 open-sans--bold">Laramie Wrestling</h3>
-    <p class="open-sans open-sans--18">Sports logo / wordmark design</p>
     </div>
     
-     <a class="card" href="https://clintkadera.com">
-    <h3 class="open-sans open-sans--18 open-sans--bold">Twilight Zone Icons</h3>
-    <p class="open-sans open-sans--18">Icon design</p>
-    </a>
-    
-    <div class="card" data-folder="{{project.folder}}">
-    <h3 class="open-sans open-sans--18 open-sans--bold">Brandon Ingram</h3>
-    <p class="open-sans open-sans--18">Graphite illustration</p>
+    <div class="block__content__wrap block__content__wrap--33">
+    <figure class="card">
+    <div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image" id="49ers" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--16">49ers Locker Room Wrap</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Mural Design</p>
     </div>
-    
-    <div class="card" data-folder="{{project.folder}}">
-    <h3 class="open-sans open-sans--18 open-sans--bold">Tony Hinchcliffe</h3>
-    <p class="open-sans open-sans--18">illustration and hand-lettering</p>
+    </figcaption>
+    </figure>
     </div>
+</figure>
+
+
+
+
+</div>
+ 
     </div>
 </div>
 </div>
@@ -133,9 +184,11 @@
 
 <!--contact section-->
 <section class="contact">
+<div class="contact__overlay"></div>
+
 <div class="contact__text-content">
 <div class="wrapper">
-<h2 class="open-sans open-sans--27">Contact</h2>
+<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--bottom--10 ">Contact</h2>
 <p class="open-sans open-sans--18 contact__greeting">My email is <a href="mailto:contact@clintkadera.com"> contact@clintkadera.com</a>, or you can message me below!</p>
 <form class="open-sans open-sans--18 contact__form" action="assets/ajax/contact.php" method="POST">
 <input class="contact__name" type="text" placeholder="Name" name="name">
@@ -149,7 +202,7 @@
 </section>
 
 </div>
-<script src="/assets/scripts/App-098bf50d59.js"></script>
+<script src="/assets/scripts/App-77b03b1557.js"></script>
 </body>
 </html> 
   

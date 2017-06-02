@@ -19,14 +19,25 @@
 }
 
 	&__image {
-	z-index: 0;
+	z-index: 2;
 	position:absolute;
-	height: 90vh;
+	height: 900px;
 	left: 40vw;
-	top:40%;
+	top:42%;
 	margin-top:-400px;
 
 	
+	}
+	
+	&__frame {
+		z-index: -2;
+		opacity: .8;
+		top: 10%;
+	left:51vw;
+	position: absolute;
+	height: 70vh;
+	width: 45vw;
+	border: 8px $grey solid;	
 	}
 	
 	&__foreground {
@@ -35,7 +46,7 @@
 	width: 120vw;
 	position: absolute;
 	right: -10vw;
-	bottom: -10vh;	
+	bottom: -20vh;	
 	}
 	
 	&__background {
@@ -106,7 +117,7 @@
 	&__text-content {
 		opacity: 1;
 		max-width: 600px;
-		z-index: 0;
+		z-index: 2;
 		position: absolute;
 		width: 100vw;
 		top: 25vh;
@@ -119,7 +130,7 @@
 
 &__text {
 	max-width: 500px;
-		z-index: -5;
+		z-index: 4;
 		@mixin atSmall {
 		text-align: left; 
 		}

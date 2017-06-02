@@ -1,7 +1,7 @@
 
 .open-sans {
 	font-family: Open Sans, Helvetica, sans serif;
-	color: $grey;
+	/*color: $grey;*/
 	line-height: 1.5;
 	font-size: 12px; 
 	font-weight: 300;
@@ -32,6 +32,11 @@
 	font-size: 22px;	
 	}
 	
+	&--24 {
+	font-size: 24px;	
+	}
+	
+	
 	&--36 {
 	font-size: 36px;	
 	}
@@ -40,10 +45,13 @@
 	font-size: 27px;
 	}
 	
+	&--35 {
+	font-size: 30px;	
+	}
+	
 	&--50 {
-	font-weight: 700;
-		color: black;
-	font-size: 50px;	
+	
+	font-size: 40px;	
 	}
 	
 	&--padding-bottom{

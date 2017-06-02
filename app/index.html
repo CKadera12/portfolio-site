@@ -7,7 +7,7 @@
  <meta name="keywords" content="Wyoming illustration, Wyoming design, coding, UFC art, UFC illustration, UFC design, ">
   <meta name="description" content="Clint likes to illustrate, design, and code. He was born in the frozen tundra of Wyoming.">
 <!--google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Merriweather:300,700|Open+Sans:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,700|Open+Sans:300, 300i, 400" rel="stylesheet">
 
 <!--normalize.css style sheet-->
 <!-- build:css /assets/styles/styles.css -->
@@ -22,7 +22,7 @@
 <div id="x-axis" class="axis"></div>
 <div id="y-axis" class="axis"></div>
 
-
+<!--<div class="hero__frame layer-1"></div>-->
 <img class="hero__image planet" src="assets/images/self-portrait-2.png">
 <img class="hero__foreground layer-1" src="assets/images/header/water-transition.png">
 <img class="hero__background hero__background--right layer-2 planet" src="assets/images/header/water-background.png">
@@ -52,10 +52,11 @@
 <div class="modal">
 
 <a href="http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/lal.png" download>
-<img class="modal__download" src="assets/images/download.svg">
+<img class="modal__download modal__icon" src="assets/images/download.svg">
 </a>
-<img class="modal__close" src="assets/images/close.svg">
+<img class="modal__close modal__icon" src="assets/images/close.svg">
 <article class="wrapper--modal modal__resume"></article>
+
 </div>
 
 <div class="modal__transition-layer">
@@ -72,64 +73,110 @@
 
 <div class="wrapper">
 
-  <h2 class="open-sans open-sans--27 margin--top--35 margin--bottom--35 column--100 portfolio__header portfolio__view">Portfolio</h2>
     <div class="project">
-    <div><p>X</p></div>
     </div>
    
     <!--_portfolio.css is parent that allows "card" to use flexblock-->
     <div class="gallery gallery--is-visible">
+    <!--<h2 class="open-sans open-sans--50 margin--top--35 column--100 color--grey3 portfolio__header portfolio__view padding--bottom--50">Portfolio</h2>-->
      
-    <figure class="card" id="fedwatch">
-    <div class="card__image" style="background-image:url(/assets/video/fedwatch/fed-watch-animation-2.gif)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="merriweather merriweather--20 merriweather--light color--dark-grey">FedWatch</h3>
-    <p class="open-sans open-sans--grey1 open-sans--18">Social media campaign design</p>
+     
+     
+     <!------------------------------------------design section------------------------------------------>
+<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--top--100 block__separation-line">Portfolio</h2>
+<figure class="block__content margin--top--20 margin--bottom--100 ">
+
+
+<div class="block__content__wrap block__content__wrap--32">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image card__animation" id="bout"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="card__contentopen-sans open-sans--regular open-sans--dark-grey open-sans--18">Bout</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Full-stack app development</p>
     </div>
     </figcaption>
     </figure>
+    </div>
     
-    <figure class="card" id="bout">
-    <div class="card__animation"></div>
-     <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--regular color--dark-grey">Bout</h3>
-    <p class="hero__text merriweather merriweather--light color--grey1 merriweather--16">Full-stack app development</p>
+<div class="block__content__wrap block__content__wrap--32">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image id="fedwatch"" style="background-image:url(assets/video/fedwatch/fed-watch-animation-2.gif)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">FedWatch</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Social media campaign design</p>
     </div>
     </figcaption>
     </figure>
+    </div>
     
-        <figure class="card" id="brandoningram">
-    <div class="card__image" style="background-image:url(/assets/images/brandon-ingram/brandon-ingram.jpg)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--semi-bold">Brandon Ingram</h3>
-    <p class="hero__text merriweather merriweather--light color--grey1 merriweather--16">Graphite illustration</p>
+    <div class="block__content__wrap block__content__wrap--32">
+    <figure class="card">
+    <div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image" id="49ers" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--16">49ers Locker Room Wrap</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Mural Design</p>
     </div>
     </figcaption>
     </figure>
-    
-       <figure class="card" id="tonyhinchcliffe">
-    <div class="card__image" style="background-image:url(/assets/images/tony-hinchcliffe/hinchcliffe-bw.jpg)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--20 open-sans--semi-bold">Tony Hinchcliffe</h3>
-    <p class="hero__text merriweather merriweather--light color--grey1 merriweather--16">Hand-lettering illustration</p>
+    </div>
+</figure>
+
+
+     <!------------------------------------------illustration section------------------------------------------>
+<figure class="block__content">
+
+
+<div class="block__content__wrap block__content__wrap--33">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image" id="tonyhinchcliffe" style="background-image:url(assets/images/tony-hinchcliffe/hinchcliffe-bw.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">Tony Hinchcliffe</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Hand-lettering illustration</p>
     </div>
     </figcaption>
     </figure>
+    </div>
     
-           <figure class="card" id="49ers">
-    <div class="card__image" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
-    <figcaption class="card__content">
-    <div class="card__content__wrap">
-    <h3 class="merriweather merriweather--light color--grey merriweather--16">San Franscisco 49ers Locker Room</h3>
-    <p class="hero__text merriweather open-sans open-sans--16 color--grey1">Mural design</p>
+<div class="block__content__wrap block__content__wrap--33">
+<figure class="card">
+<div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image id="fedwatch"" style="background-image:url(assets/images/brandon-ingram/brandon-ingram.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">FedWatch</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Social media campaign design</p>
     </div>
     </figcaption>
     </figure>
+    </div>
     
+    <div class="block__content__wrap block__content__wrap--33">
+    <figure class="card">
+    <div class="card__learn-more open-sans open-sans--24">Learn more</div>
+<div class="card__image" id="49ers" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
+<figcaption class="card__content">
+   <div class="card__content__wrap">
+    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--16">49ers Locker Room Wrap</h3>
+    <p class="open-sans open-sans--grey1 open-sans--14">Mural Design</p>
+    </div>
+    </figcaption>
+    </figure>
+    </div>
+</figure>
+
+
+
+
+</div>
+ 
     </div>
 </div>
 </div>
@@ -143,7 +190,7 @@
 
 <div class="contact__text-content">
 <div class="wrapper">
-<h2 class="open-sans open-sans--27">Contact</h2>
+<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--bottom--10 ">Contact</h2>
 <p class="open-sans open-sans--18 contact__greeting">My email is <a href="mailto:contact@clintkadera.com"> contact@clintkadera.com</a>, or you can message me below!</p>
 <form class="open-sans open-sans--18 contact__form" action="assets/ajax/contact.php" method="POST">
 <input class="contact__name" type="text" placeholder="Name" name="name">

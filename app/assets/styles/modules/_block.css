@@ -15,7 +15,7 @@ text-align: center;
 	z-index: -5;
 	}
 	&__content {
-		
+		position: relative;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -59,7 +59,7 @@ justify-content: space-between;
 	&--25 {
 	max-height: 39.5vw;
 	display: flex;
-	flex-basis: 24%;
+	flex-basis: 23%;
 	flex-direction: column;
 	justify-content: space-between;
 	
@@ -72,6 +72,26 @@ justify-content: space-between;
 	
 	&--20 {
 	flex-basis: 19%;	
+	}
+	
+	&--23 {
+	flex-basis: 22%;	
+	}
+	
+	&--40 {
+	flex-basis: 38%;	
+	}
+	
+	&--30 {
+	flex-basis: 29.5%;	
+	}
+	
+	&--32 {
+	flex-basis: 32%;	
+	}
+	
+	&--10 {
+	flex-basis: 9%;	
 	}
 	
 	}
@@ -111,6 +131,10 @@ justify-content: space-between;
 	
 	&__separation-line {
 	border-bottom: 1px solid $grey4;	
+	
+	&--dark {
+	border-bottom: 1px solid $grey2;	
+	}
 	}
 
 &__header {

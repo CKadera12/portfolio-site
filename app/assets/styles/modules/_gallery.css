@@ -1,5 +1,5 @@
 .gallery {
-
+	
 @mixin atSmall {
 	width: 100%;
 	display: none;
@@ -8,7 +8,10 @@ flex-flow: wrap;
 
 
 &--is-visible{
-display: flex;
+	/*added line*/
+	position: relative;
+	/*typically display flex*/
+display: block;
 animation: fade 1s ease-out;
 }
 }

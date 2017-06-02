@@ -31,7 +31,6 @@ class Modal {
 
   keyPressHandler(e) {
     if (e.keyCode == 27) {
-		console.log("esc pressed");
       this.closeModal();
 	  this.body.removeClass("no-scrolling");
     }

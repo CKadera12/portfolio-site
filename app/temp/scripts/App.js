@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9898,6 +9898,58 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ChangeProject = function () {
+	function ChangeProject(project) {
+		_classCallCheck(this, ChangeProject);
+
+		this.changeProject = project;
+		this.portfolio = (0, _jquery2.default)(".portfolio");
+		this.project = (0, _jquery2.default)(".project");
+
+		this.newHTML = "/assets/ajax/" + project.split('#').pop() + '.html';
+
+		this.events();
+	}
+
+	_createClass(ChangeProject, [{
+		key: "events",
+		value: function events() {
+			this.portfolio.on("click", this.changeProject, this.loadProject.bind(this));
+		}
+	}, {
+		key: "loadProject",
+		value: function loadProject() {
+			this.project.load(this.newHTML);
+			window.scrollTo(0, 900);
+		}
+	}]);
+
+	return ChangeProject;
+}();
+
+exports.default = ChangeProject;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -9908,6 +9960,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Fade = function Fade() {
 	_classCallCheck(this, Fade);
+
+	//$('.card').addClass('reveal-item');
 
 	(0, _jquery2.default)(window).scroll(function () {
 		var currentScrollTop = (0, _jquery2.default)(window).scrollTop();
@@ -9924,6 +9978,10 @@ var Fade = function Fade() {
 			(0, _jquery2.default)('.hero__text-content, .hero__image, .hero__background--2').css('opacity', (0, _jquery2.default)('.hero__overlay').height() / (currentScrollTop * 4));
 		} else {
 			(0, _jquery2.default)('.hero__text-content, .hero__image, .hero__background--2').css('opacity', 1);
+		}
+
+		if (currentScrollTop > (0, _jquery2.default)('.card').offset().top) {
+			(0, _jquery2.default)('.card').addClass("reveal-item--is-visible");
 		}
 
 		(0, _jquery2.default)('.hero__text-content').css({
@@ -9947,7 +10005,7 @@ var Fade = function Fade() {
 exports.default = Fade;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10000,7 +10058,7 @@ var Form = function Form() {
 exports.default = Form;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10054,7 +10112,6 @@ var Modal = function () {
 		key: "keyPressHandler",
 		value: function keyPressHandler(e) {
 			if (e.keyCode == 27) {
-				console.log("esc pressed");
 				this.closeModal();
 				this.body.removeClass("no-scrolling");
 			}
@@ -10091,7 +10148,7 @@ var Modal = function () {
 exports.default = Modal;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10105,7 +10162,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _gsap = __webpack_require__(9);
+var _gsap = __webpack_require__(11);
 
 var _gsap2 = _interopRequireDefault(_gsap);
 
@@ -10190,7 +10247,57 @@ var ParallaxMouse = function ParallaxMouse() {
 exports.default = ParallaxMouse;
 
 /***/ }),
-/* 5 */
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PositionChange = function () {
+	function PositionChange() {
+		_classCallCheck(this, PositionChange);
+
+		this.portfolio = (0, _jquery2.default)(".portfolio");
+		//$('.card').addClass('reveal-item');
+
+
+		this.portfolio.on("click", this.positionChange.bind(this));
+	}
+
+	_createClass(PositionChange, [{
+		key: "positionChange",
+		value: function positionChange() {
+			(0, _jquery2.default)(window).scroll(function () {
+				var currentScrollTop = (0, _jquery2.default)(window).scrollTop();
+				if (currentScrollTop > 400) {
+
+					(0, _jquery2.default)('.project__back').addClass("project__icon--fixed");
+				}
+			});
+		}
+	}]);
+
+	return PositionChange;
+}();
+
+exports.default = PositionChange;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10211,13 +10318,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Project = function () {
-	function Project(element, parent) {
+	function Project(element) {
 		_classCallCheck(this, Project);
 
 		this.elementClicked = element;
-		this.parentElement = parent;
 		this.portfolio = (0, _jquery2.default)(".portfolio");
-		this.gallery = (0, _jquery2.default)(".gallery"), this.project = (0, _jquery2.default)(".project"), this.returnToGallery = (0, _jquery2.default)(".back"), this.portfolioHeader = (0, _jquery2.default)(".portfolio__header");
+		var gallery = (0, _jquery2.default)(".gallery");
+		var project = (0, _jquery2.default)(".project");
+		this.returnToGallery = (0, _jquery2.default)(".back");
+		var portfolioHeader = (0, _jquery2.default)(".portfolio__header");
 
 		this.events();
 	}
@@ -10226,16 +10335,32 @@ var Project = function () {
 		key: "events",
 		value: function events() {
 			//this.elementClicked.click(this.toggle.bind(this));
-			this.parentElement.on("click", this.elementClicked, this.toggle.bind(this));
+			this.portfolio.on("click", this.elementClicked, this.toggle.bind(this));
+
+			(0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 		}
+	}, {
+		key: "keyPressHandler",
+		value: function keyPressHandler(e) {
+			if (e.keyCode == 27 && (0, _jquery2.default)(".project").hasClass("project--is-visible")) {
+				console.log("esc pressed");
+				(0, _jquery2.default)(".gallery").addClass("gallery--is-visible");
+				(0, _jquery2.default)(".project").removeClass("project--is-visible");
+			}
+		}
+
+		//this.project.on("click", this.elementClicked, toggle.bind(this));
+		//this.elementClicked.click(this.toggle.bind(this));
+
+
 	}, {
 		key: "toggle",
 		value: function toggle() {
 			console.log("working");
 			window.scrollTo(0, 900);
-			this.portfolioHeader.toggleClass("portfolio__view");
-			this.project.toggleClass("project--is-visible");
-			this.gallery.toggleClass("gallery--is-visible");
+
+			(0, _jquery2.default)(".project").toggleClass("project--is-visible");
+			(0, _jquery2.default)(".gallery").toggleClass("gallery--is-visible");
 		}
 	}]);
 
@@ -10244,18 +10369,19 @@ var Project = function () {
 
 exports.default = Project;
 
-/*
-if (portfolioHeader.text() == "Portfolio")
+/*if ($(".portfolio__header").text() == "Portfolio")
 	{
-		portfolioHeader.text("Return to Gallery");
+		$(".portfolio__header").text("Return to Gallery");
 	}
 		else
 		{
-		portfolioHeader.text("Portfolio");	
-		} */
+		$(".portfolio__header").text("Portfolio");	
+		}*/
+
+//$(".portfolio__header").toggleClass("portfolio__view");
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10271,7 +10397,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(10);
+var _noframework = __webpack_require__(12);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
@@ -10317,7 +10443,7 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10367,7 +10493,7 @@ var WorkLoad = function () {
 exports.default = WorkLoad;
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10377,33 +10503,41 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _WorkLoad = __webpack_require__(7);
+var _WorkLoad = __webpack_require__(9);
 
 var _WorkLoad2 = _interopRequireDefault(_WorkLoad);
 
-var _Project = __webpack_require__(5);
+var _Project = __webpack_require__(7);
 
 var _Project2 = _interopRequireDefault(_Project);
 
-var _RevealOnScroll = __webpack_require__(6);
+var _RevealOnScroll = __webpack_require__(8);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
-var _Modal = __webpack_require__(3);
+var _Modal = __webpack_require__(4);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
-var _Form = __webpack_require__(2);
+var _Form = __webpack_require__(3);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _Fade = __webpack_require__(1);
+var _Fade = __webpack_require__(2);
 
 var _Fade2 = _interopRequireDefault(_Fade);
 
-var _ParallaxMouse = __webpack_require__(4);
+var _ParallaxMouse = __webpack_require__(5);
 
 var _ParallaxMouse2 = _interopRequireDefault(_ParallaxMouse);
+
+var _ChangeProject = __webpack_require__(1);
+
+var _ChangeProject2 = _interopRequireDefault(_ChangeProject);
+
+var _PositionChange = __webpack_require__(6);
+
+var _PositionChange2 = _interopRequireDefault(_PositionChange);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10414,10 +10548,13 @@ new _WorkLoad2.default((0, _jquery2.default)("#tonyhinchcliffe"), "tony-hinchcli
 new _WorkLoad2.default((0, _jquery2.default)("#brandoningram"), "brandon-ingram.html");
 new _WorkLoad2.default((0, _jquery2.default)("#bout"), "bout.html");
 new _WorkLoad2.default((0, _jquery2.default)("#49ers"), "49ers.html");
-//new RevealOnScroll($(".card"), "90%");  
-new _Project2.default((0, _jquery2.default)(".card"), (0, _jquery2.default)(".gallery"));
-new _Project2.default((0, _jquery2.default)(".nothing"), (0, _jquery2.default)(".project"));
+//new RevealOnScroll($(".card"), "80%");  
+new _Project2.default('.card');
+new _Project2.default('.project__back');
+new _ChangeProject2.default('#fedwatch');
+new _ChangeProject2.default('#bout');
 
+var positionChange = new _PositionChange2.default();
 var parallax = new _ParallaxMouse2.default();
 var fade = new _Fade2.default();
 var modal = new _Modal2.default();
@@ -10425,7 +10562,7 @@ var form = new _Form2.default();
 //var type = new Type();
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16471,7 +16608,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 						if (global) {
 							_globals[n] = _exports[n] = cl; //provides a way to avoid global namespace pollution. By default, the main classes like TweenLite, Power1, Strong, etc. are added to window unless a GreenSockGlobals is defined. So if you want to have things added to a custom object instead, just do something like window.GreenSockGlobals = {} before loading any GreenSock files. You can even set up an alias like window.GreenSockGlobals = windows.gs = {} so that you can access everything like gs.TweenLite. Also remember that ALL classes are added to the window.com.greensock object (in their respective packages, like com.greensock.easing.Power1, com.greensock.TweenLite, etc.)
 							hasModule = (typeof(module) !== "undefined" && module.exports);
-							if (!hasModule && "function" === "function" && __webpack_require__(11)){ //AMD
+							if (!hasModule && "function" === "function" && __webpack_require__(13)){ //AMD
 								!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() { return cl; }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 							} else if (hasModule){ //node
@@ -18286,10 +18423,10 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 		_tickerActive = false; //ensures that the first official animation forces a ticker.tick() to update the time when it is instantiated
 
 })((typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window, "TweenMax");
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports) {
 
 /*!
@@ -19052,7 +19189,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 ;
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -19061,7 +19198,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports) {
 
 var g;
