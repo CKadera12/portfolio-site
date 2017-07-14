@@ -8,7 +8,6 @@
 @import "base/_margin";
 
 @import "modules/_hero";
-@import "modules/_button";
 @import "modules/_card"; 
 @import "modules/_wrapper";
 @import "modules/_portfolio";
@@ -25,3 +24,6 @@
 @import "modules/_notif";
 @import "modules/_color";
 @import "modules/_text";
+@import "modules/_ink"; 
+@import "modules/_button";
+@import "modules/_display";

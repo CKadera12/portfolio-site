@@ -2,17 +2,13 @@
 	
 width: 100%;
 max-width: 980px;
-	padding-left: 20px;
-	padding-right: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-	overflow: hidden;
+	text-align: left;
+
 	
-	@mixin atSmall {
-		text-align: left;
-	padding-left: 10vw;
-	padding-right: 10vw;	
+	&--wide {
+	max-width: 1040px;	
 	}
 	
 	&--modal {

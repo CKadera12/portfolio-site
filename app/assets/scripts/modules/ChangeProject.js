@@ -18,7 +18,7 @@ class ChangeProject {
 	
 	loadProject() {
 		this.project.load(this.newHTML);
-		window.scrollTo(0, 900);
+		window.scrollTo(0, 850);
 		
 		
 	}

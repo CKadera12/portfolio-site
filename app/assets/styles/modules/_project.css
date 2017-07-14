@@ -74,19 +74,21 @@ flex-basis: 100%;
 
 &__back {
 cursor: pointer;
-transition: color .25s ease-out;
+opacity: .6;
+transition: opacity .25s ease-out;
 
 &:hover {
-color: black;
+opacity: 1;
 }	
 }
 
 &__change-project {
 cursor: pointer;
-transition: color .25s ease-out;
+opacity: .6;
+transition: opacity .25s ease-out;
 
 &:hover {
-color: black;
+opacity: 1;
 }	
 }
 

@@ -13,7 +13,6 @@ constructor(element) {
 }
 	
 	events(){
-//this.elementClicked.click(this.toggle.bind(this));
 this.portfolio.on("click", this.elementClicked, this.toggle.bind(this));
 
 $(document).keyup(this.keyPressHandler.bind(this));
@@ -28,14 +27,10 @@ $(document).keyup(this.keyPressHandler.bind(this));
 		
     }
   }
-
-//this.project.on("click", this.elementClicked, toggle.bind(this));
-//this.elementClicked.click(this.toggle.bind(this));
-
 	
 toggle(){
 	console.log("working");
-	window.scrollTo(0, 900);
+	window.scrollTo(0, 850);
 	
 	$(".project").toggleClass("project--is-visible");
 	$(".gallery").toggleClass("gallery--is-visible");
@@ -43,17 +38,3 @@ toggle(){
 }
 
 export default Project;
-
-
-
-
-/*if ($(".portfolio__header").text() == "Portfolio")
-	{
-		$(".portfolio__header").text("Return to Gallery");
-	}
-		else
-		{
-		$(".portfolio__header").text("Portfolio");	
-		}*/
-		
-		//$(".portfolio__header").toggleClass("portfolio__view");

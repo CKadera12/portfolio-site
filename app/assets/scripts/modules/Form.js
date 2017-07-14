@@ -6,6 +6,7 @@ class Form {
 		this.contactForm = $(".contact__form");
 		this.contactForm.on("submit", function() {
 			$(".contact__greeting").text("Message Sent! I'll get back to you soon.");
+			$(".contact__form").addClass("contact--disapear");
 			var that = $(this),
 			url = that.attr("action"),
 			type = that.attr("method"),

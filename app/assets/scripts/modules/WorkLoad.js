@@ -3,6 +3,7 @@ import $ from "jquery";
 class WorkLoad {
 constructor(cardID, file){
 $.ajaxSetup ({cache: true});
+
 this.card = cardID;
 this.project = $(".project");
 this.newHTML = "/assets/ajax/" + file;
@@ -18,6 +19,7 @@ events(){
 
 
 loadProject() {
+	console.log(this);
 this.project.load(this.newHTML);
 }
 }

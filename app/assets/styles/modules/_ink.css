@@ -1,0 +1,9 @@
+.ink {
+	&-drop{
+	position: absolute;
+	top: 400px;
+	left: 900px;
+	height: 80px;
+	}
+	
+}

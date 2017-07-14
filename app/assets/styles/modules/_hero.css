@@ -1,96 +1,86 @@
 .hero {
+	
 	overflow: hidden;
 	z-index: 1;
 	width: 100vw;
 	position: relative;
 	display: block;
 	/*background-image: url("../../assets/images/header/paint-background.jpg");*/
-	background-color: $lightGrey;
+	background-color: rgb(230,230,230);
+	
 	background-repeat: repeat;
-	height: 90vh;
+	height: 850px;
 	/*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
 	/* hero images*/
-	
-	
-	.planet {
-  background-size: cover;
-  position: absolute;
-}
 
 	&__image {
-	z-index: 2;
-	position:absolute;
-	height: 900px;
-	left: 40vw;
-	top:42%;
+		display: none;	
+	/*	 transform: scaleX(-1);*/
+	@mixin atMedium {
+	display: block;
+	z-index: 6;
+	position:fixed;
+	height: 850px;
+	left: 44vw;
+	top:390px;
 	margin-top:-400px;
+	
+		}
+	}
+	
+	&__down-arrow {
+	z-index: 50;
+	position: fixed;
+	margin-left: 50%;
+	bottom: 70px;
+	width: 50px;
+	}
+	
+	
+	&__trees {
+	width: 180%;
+opacity: .6;
+bottom: -5%;
 
 	
 	}
 	
-	&__frame {
-		z-index: -2;
-		opacity: .8;
-		top: 10%;
-	left:51vw;
-	position: absolute;
-	height: 70vh;
-	width: 45vw;
-	border: 8px $grey solid;	
-	}
 	
-	&__foreground {
-		opacity: 2;
-	z-index: 20;
-	width: 120vw;
-	position: absolute;
-	right: -10vw;
-	bottom: -20vh;	
-	}
+&__mountains {
+	z-index: 4;
+	position:absolute;
+	height: 950px;
+	left: -10vw; 
+	width: 120%;
 	
-	&__background {
-		
-	z-index: 2;
-	width: 100%;
-	position: absolute;
-	bottom: 0px;
-	pointer-events: none;
-	
-	&--right{
+	bottom:-100px;
 
-	right: -10vw;
-	}
-	
-	&--left{
-	left: 0;	
-	bottom: -10vh;
-	}
-	
-	&--2{
-	margin-top: -10vh;
-	z-index: -5;	
-	height: 120vh;
 	
 	}
 	
-	&--paint {
+		&__backsplash--1 {
 		position: absolute;
-		opacity: .5;
-	bottom: 200px;
-	z-index: -10;
+	height: 50%;
+	top: 10vh;
+	left: 50vw;
+	z-index:2;
+	opacity: 1;
+	
 	}
-	}
+	
+	
 	
 	&__rectangle {
 		position: fixed;
 		background-position: fixed;
-		right: 14vw;
-		width: 100%;
-		height: 100%;
+		background-color: red;
+		left: 54vw;
+		width: 500px;
+		height: 40%;
+		top: 28vh;
 		margin-left: auto;
-		margin-right: auto;
-	border: 10px white solid;	
+		margin-right: auto;	
 	}
 	
 	&__arrow {
@@ -104,7 +94,7 @@
 	}
 	
 	&__overlay {
-		z-index: -5;
+		z-index: 20;
 		background-color:#000;
 		opacity:0.0;
 		position:absolute;
@@ -115,25 +105,26 @@
 	}
 
 	&__text-content {
-		opacity: 1;
-		max-width: 600px;
-		z-index: 2;
-		position: absolute;
-		width: 100vw;
-		top: 25vh;
-		display: flex;
 		
-		@mixin atSmall {
+		opacity: 1;
+		max-width: 1000px;
+		z-index: 2;
+		
+		width: 100vw;
+		top: 270px;
+		position: fixed;
+		display: flex;
+	
 		display: block;	
-		}
+
+
 }
 
 &__text {
-	max-width: 500px;
+	max-width: 1000px;
 		z-index: 4;
-		@mixin atSmall {
-		text-align: left; 
-		}
+		text-align: left;
+		
 		
 		}
 }

@@ -1,11 +1,9 @@
 .portfolio {
 	position: relative;
-z-index: 10;
+z-index: 20;
 background: white;
-margin-bottom: 1000px;
-padding-bottom: 200px;
-padding-top: 100px;
-
+margin-bottom: 950px;
+min-height: 100vh;
 
 ;
 @mixin atSmall {
@@ -15,14 +13,25 @@ justify-content: space-between;
 flex-flow: wrap;
 }
 
-&__foreground{
+
+&__foreground-top{
+	opacity: 2;
+	z-index: -1;
+	width: 120vw;
+	position: absolute;
+	right: -10vw;
+	top: -25vw;
+}
+
+
+&__foreground-bottom{
 transform:scaleY(-1);
 	opacity: 2;
 	z-index: 0;
 	width: 120vw;
 	position: absolute;
 	right: -10vw;
-	bottom: -34vh;
+	bottom: -25vw;
 }
 
 &__view {

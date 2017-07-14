@@ -3,6 +3,12 @@
 	text-align: center;	
 	}
 	
+	&--align-right{
+		float: right;
+	
+	}
+	
+	
 	&--size-24 {
 	font-size: 24px;	
 	}

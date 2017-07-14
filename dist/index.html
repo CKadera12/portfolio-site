@@ -6,13 +6,18 @@
 <title>Clint Kadera – Portfolio Website</title>
  <meta name="keywords" content="Wyoming illustration, Wyoming design, coding, UFC art, UFC illustration, UFC design, ">
   <meta name="description" content="Clint likes to illustrate, design, and code. He was born in the frozen tundra of Wyoming.">
+  
+  
+ 
 <!--google fonts-->
+
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700|Open+Sans:300, 300i, 400" rel="stylesheet">
 
 <!--normalize.css style sheet-->
-<link rel="stylesheet" href="/assets/styles/styles-73abe4735c.css"/>
+<link rel="stylesheet" href="/assets/styles/styles-3e453c618e.css"/>
 
 </head>
+<body>
 <section class="hero">
 <!--<div class="hero__rectangle"></div>-->
 <div class="hero__overlay"></div>
@@ -21,21 +26,20 @@
 <div id="y-axis" class="axis"></div>
 
 <!--<div class="hero__frame layer-1"></div>-->
-<img class="hero__image planet" src="assets/images/self-portrait-2.png">
-<img class="hero__foreground layer-1" src="assets/images/header/water-transition.png">
-<img class="hero__background hero__background--right layer-2 planet" src="assets/images/header/water-background.png">
+<img class="hero__image" src="assets/images/self-portrait-2.png">
 
 <div class="hero__content">
-<img class="hero__background--2 planet layer-3" src="assets/images/header/paint-background.jpg">
+<!--<img class="hero__background--2 planet layer-3" src="assets/images/header/paint-background.jpg">-->
    
-    <div class="wrapper">
-    <div class="hero__text-content planet" id="planet-1">
+    <div class="wrapper wrapper--wide">
+    <div class="hero__text-content" id="planet-1">
     <header>
-        <h1 class="merriweather merriweather--44">Hi, I'm Clint</h1>
+        <h1 class="merriweather merriweather--44">Hi, I'm Clint.</h1>
    
-        <div class="hero__text open-sans open-sans--22 color--grey1">
+        <div class="hero__text open-sans open-sans--22">
        	<p>I'm an illustrator and designer from Wyoming.</p>
-        <p>If you're hiring full-time, I'd love to be considered!</p>
+        <!--<p>If you're hiring full-time, I'd love to be considered!</p>-->
+        <p>If you're working on a project, I'd love to hear about it!</p>
         </div>
         <p class= "button margin--top--35 mdl-ripple open-modal">Résumé</p>
   
@@ -46,7 +50,7 @@
         </div>
 
 </section>
-<body>
+
 <div class="modal">
 
 <a href="http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/lal.png" download>
@@ -54,22 +58,19 @@
 </a>
 <img class="modal__close modal__icon" src="assets/images/close.svg">
 <article class="wrapper--modal modal__resume"></article>
-
 </div>
 
 <div class="modal__transition-layer">
 <div class="modal__bg-layer"></div>
 </div>
-<!--hero section-->
 
 
 <!--portfolio section-->
 <section id="gallery">
 
-<div class="portfolio padding--top--40">
-<img class="portfolio__foreground" src="assets/images/header/water-transition.png">
+<div class="portfolio padding--top--150 padding--bottom--100">
 
-<div class="wrapper">
+<div class="wrapper wrapper--wide">
 
     <div class="project">
     </div>
@@ -79,117 +80,151 @@
     <!--<h2 class="open-sans open-sans--50 margin--top--35 column--100 color--grey3 portfolio__header portfolio__view padding--bottom--50">Portfolio</h2>-->
      
      
+ <!---------------------------portfolio section--------------------------->
+<div class="block__separation-line block__separation-line--dark padding--bottom--10 margin--bottom--50">
+<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey ">Projects</h2>
+</div>
+
+
+
+ <!----------------------------project bout----------------------------------->
+        
+        <figure class="block__content margin--bottom--50 block__separation-line padding--bottom--50">
+    <div class="block__content__wrap block__content__wrap--40">
+<figure class="card" id="bout">
+<img class="card__learn-more" src="assets/images/open.svg"></img>
+<div class="card__image" style="background-image:url(assets/images/bout/bout-thumbnail.svg)"></div>
+</figure>
+     </div>
+
+    <figcaption class="block__content__wrap block__content__wrap--60">
+    <h3 class="merriweather merriweather--light merriweather--22">Bout App<span class="open-sans open-sans--grey1 open-sans--20"> | 103 KB</span></h3> 
+
+  <p class="open-sans open-sans--grey2 line-height--14 open-sans--18 margin--bottom--20">Full-stack app development</p>
+<p class="open-sans open-sans--grey1 open-sans--16">Bout is a fighter dictionary app. To build my developer skills, I set out to make a full-stack personal project. Currently, it’s in the design and illustration stage. But, as I learn more about back-end development, I’d like to complete the project using the MEAN stack.</p>
+</figcaption>
+</figure>
+
+
+
+<!----------------------------project 49ers----------------------------------->
+
+<figure class="block__content block__separation-line padding--bottom--50 margin--bottom--50">
+<div class="block__content__wrap block__content__wrap--40">
+<figure class="card" id="49ers">
+<img class="card__learn-more" src="assets/images/open.svg"></img>
+<div class="card__image" style="background-image:url(assets/images/49ers/49ers__room--trophies.jpg)"></div>
+</figure>
+</div>
      
-     <!------------------------------------------design section------------------------------------------>
-<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--top--100 block__separation-line">Portfolio</h2>
-<figure class="block__content margin--top--20 margin--bottom--100 ">
-
-
-<div class="block__content__wrap block__content__wrap--32">
-<figure class="card">
-<div class="card__learn-more open-sans open-sans--24">Learn more</div>
-<div class="card__image card__animation" id="bout"></div>
-<figcaption class="card__content">
-   <div class="card__content__wrap">
-    <h3 class="card__contentopen-sans open-sans--regular open-sans--dark-grey open-sans--18">Bout</h3>
-    <p class="open-sans open-sans--grey1 open-sans--14">Full-stack app development</p>
-    </div>
-    </figcaption>
-    </figure>
-    </div>
-    
-<div class="block__content__wrap block__content__wrap--32">
-<figure class="card">
-<div class="card__learn-more open-sans open-sans--24">Learn more</div>
-<div class="card__image id="fedwatch"" style="background-image:url(assets/video/fedwatch/fed-watch-animation-2.gif)"></div>
-<figcaption class="card__content">
-   <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">FedWatch</h3>
-    <p class="open-sans open-sans--grey1 open-sans--14">Social media campaign design</p>
-    </div>
-    </figcaption>
-    </figure>
-    </div>
-    
-    <div class="block__content__wrap block__content__wrap--32">
-    <figure class="card">
-    <div class="card__learn-more open-sans open-sans--24">Learn more</div>
-<div class="card__image" id="49ers" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
-<figcaption class="card__content">
-   <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--16">49ers Locker Room Wrap</h3>
-    <p class="open-sans open-sans--grey1 open-sans--14">Mural Design</p>
-    </div>
-    </figcaption>
-    </figure>
-    </div>
-</figure>
-
-
-     <!------------------------------------------illustration section------------------------------------------>
-<figure class="block__content">
-
-
-<div class="block__content__wrap block__content__wrap--33">
-<figure class="card">
-<div class="card__learn-more open-sans open-sans--24">Learn more</div>
-<div class="card__image" id="tonyhinchcliffe" style="background-image:url(assets/images/tony-hinchcliffe/hinchcliffe-bw.jpg)"></div>
-<figcaption class="card__content">
-   <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">Tony Hinchcliffe</h3>
-    <p class="open-sans open-sans--grey1 open-sans--14">Hand-lettering illustration</p>
-    </div>
-    </figcaption>
-    </figure>
-    </div>
-    
-<div class="block__content__wrap block__content__wrap--33">
-<figure class="card">
-<div class="card__learn-more open-sans open-sans--24">Learn more</div>
-<div class="card__image id="fedwatch"" style="background-image:url(assets/images/brandon-ingram/brandon-ingram.jpg)"></div>
-<figcaption class="card__content">
-   <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--18">FedWatch</h3>
-    <p class="open-sans open-sans--grey1 open-sans--14">Social media campaign design</p>
-    </div>
-    </figcaption>
-    </figure>
-    </div>
-    
-    <div class="block__content__wrap block__content__wrap--33">
-    <figure class="card">
-    <div class="card__learn-more open-sans open-sans--24">Learn more</div>
-<div class="card__image" id="49ers" style="background-image:url(/assets/images/49ers/49ers__room--trophies.jpg)"></div>
-<figcaption class="card__content">
-   <div class="card__content__wrap">
-    <h3 class="open-sans open-sans--regular open-sans--dark-grey open-sans--16">49ers Locker Room Wrap</h3>
-    <p class="open-sans open-sans--grey1 open-sans--14">Mural Design</p>
-    </div>
-    </figcaption>
-    </figure>
-    </div>
-</figure>
-
-
-
-
-</div>
+<figcaption class="block__content__wrap block__content__wrap--60">
+<h3 class="merriweather merriweather--light merriweather--22">49ers Locker Room Entrance<span class="open-sans open-sans--grey1 open-sans--20"> | 103 KB</span></h3> 
  
-    </div>
-</div>
-</div>
+<p class="open-sans open-sans--grey2 line-height--14 open-sans--18 margin--bottom--20">Large-scale graphic design</p>
+<p class="open-sans open-sans--darkgrey open-sans--18">While working in-house for the San Franscisco 49ers, I was asked to create the locker room entrance. I adhered to the 49ers brand aesthetic, while incorporating requests from general manager John Lynch and coach Kyle Shanahan.</p>
+</figcaption>
+</figure> 
 
 
+
+<!----------------------------project tony hinchcliffe----------------------------------->
+
+<figure class="block__content block__separation-line padding--bottom--50 margin--bottom--50">
+<div class="block__content__wrap block__content__wrap--40">
+<figure class="card" id="tonyhinchcliffe">
+<img class="card__learn-more" src="assets/images/open.svg"></img>
+<div class="card__image" style="background-image:url(assets/images/tony-hinchcliffe/hinchcliffe-thumbnail.jpg)"></div>
+</figure>
+</div>
+     
+<figcaption class="block__content__wrap block__content__wrap--60">
+<h3 class="merriweather merriweather--light merriweather--22">Tony Hinchcliffe Poster<span class="open-sans open-sans--grey1 open-sans--20"> | 103 KB</span></h3> 
+ 
+<p class="open-sans open-sans--grey2 line-height--14 open-sans--18 margin--bottom--20">Hand-lettering illustration</p>
+<p class="open-sans open-sans--darkgrey open-sans--18">While working, I enjoy listening to comedy podcasts like Kill Tony. For fun, I created a Tony Hinchcliffe (host of Kill Tony) poster. Tony saw the poster, and he used it to promote his Kansas City 2016 tour.</p>
+</figcaption>
+</figure> 
+
+
+
+<!----------------------------project psycho----------------------------------->
+        
+<!--<figure class="block__content block__separation-line padding--bottom--50 margin--bottom--50">
+<div class="block__content__wrap block__content__wrap--40">
+<figure class="card" id="psycho">
+<img class="card__learn-more" src="assets/images/open.svg"></img>
+<div class="card__image" style="background-image:url(assets/images/psycho/psycho-thumbnail.jpg)"></div>
+</figure>
+</div>
+     
+<figcaption class="block__content__wrap block__content__wrap--60">
+<h3 class="merriweather merriweather--light merriweather--22">Psycho Shirt Design<span class="open-sans open-sans--grey1 open-sans--20"> | 103 KB</span></h3> 
+
+<p class="open-sans open-sans--grey2 line-height--14 open-sans--18 margin--bottom--20">Shirt design</p>
+<p class="open-sans open-sans--grey1 open-sans--18">I love horror movies, and Alfred Hitchcock is one of my favorite directors. I created an homage illustration to Hitchcock's "Psycho," and I submitted the design to Tee Fury.</p>
+    </figcaption>
+    </figure>-->
+
+<!----------------------------project fedwatch----------------------------------->
+        
+<figure class="block__content block__separation-line padding--bottom--50 margin--bottom--50">
+<div class="block__content__wrap block__content__wrap--40">
+<figure class="card" id="fedwatch">
+<img class="card__learn-more" src="assets/images/open.svg"></img>
+<div class="card__image" style="background-image:url(assets/images/fedwatch/fedwatch-thumbnail.jpg)"></div>
+</figure>
+</div>
+     
+<figcaption class="block__content__wrap block__content__wrap--60">
+<h3 class="merriweather merriweather--light merriweather--22">FedWatch<span class="open-sans open-sans--grey1 open-sans--20"> | 103 KB</span></h3> 
+
+<p class="open-sans open-sans--grey2 line-height--14 open-sans--18 margin--bottom--20">Social media campaign design</p>
+<p class="open-sans open-sans--grey1 open-sans--18">The Mises Institute – an Austrian Economics non-profit – asked me to build a social media campaign for "FedWatch," their new web series. I created unified graphics for their  Instagram, Twitter, and Facebook pages.</p>
+    </figcaption>
+    </figure>
+
+
+
+
+
+
+
+<!----------------------------project brandon ingram----------------------------------->
+
+<figure class="block__content margin--bottom--100">
+<div class="block__content__wrap block__content__wrap--40">
+<figure class="card" id="brandoningram">
+<img class="card__learn-more" src="assets/images/open.svg"></img>
+<div class="card__image" style="background-image:url(assets/images/brandon-ingram/brandon-ingram-small.jpg)"></div>
+</figure>
+</div>
+     
+<figcaption class="block__content__wrap block__content__wrap--60">
+<h3 class="merriweather merriweather--light merriweather--22">Brandon Ingram Illustration<span class="open-sans open-sans--grey1 open-sans--20"> | 103 KB</span></h3> 
+ 
+<p class="open-sans open-sans--grey2 line-height--14 open-sans--18 margin--bottom--20">Graphite and photoshop illustration</p>
+<p class="open-sans open-sans--darkgrey open-sans--18">I love seeing athletes who are artists themselves. Brandon Ingram, a Lakers basketball player, also enjoys drawing. As a personal project, I created a caricature illustration.</p>
+</figcaption>
+</figure> 
+
+
+
+
+  </div>
+</div>
+</div>
 </section>
 
-<!--contact section-->
+
+
+<!----------------------------contact section----------------------------------->
+
 <section class="contact">
 <div class="contact__overlay"></div>
 
 <div class="contact__text-content">
 <div class="wrapper">
-<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--bottom--10 ">Contact</h2>
-<p class="open-sans open-sans--18 contact__greeting">My email is <a href="mailto:contact@clintkadera.com"> contact@clintkadera.com</a>, or you can message me below!</p>
+<h2 class="merriweather merriweather--24 merriweather--light color--dark-grey padding--bottom--10 "><p class="open-sans open-sans--18 contact__greeting">My email is <a href="mailto:contact@clintkadera.com"> contact@clintkadera.com</a>, or you can message me below!</p>
 <form class="open-sans open-sans--18 contact__form" action="assets/ajax/contact.php" method="POST">
 <input class="contact__name" type="text" placeholder="Name" name="name">
 <input class="contact__email" type="email" placeholder="Email" name="email">
@@ -201,8 +236,11 @@
 </div>
 </section>
 
-</div>
-<script src="/assets/scripts/App-77b03b1557.js"></script>
+
+
+<!----------------------------build js----------------------------------->
+
+<script src="/assets/scripts/App-88f268b1d9.js"></script> 
 </body>
 </html> 
   
